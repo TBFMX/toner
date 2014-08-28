@@ -1,0 +1,17 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Catalogo de Toners</h1>
+
+<% @cartuchos.each do |cartucho| %>
+	<div class="entry">
+		<%= image_tag(cartucho.image_url) %>
+		<h3><%= cartucho.title %></h3>
+		<%= sanitize(cartucho.description) %>
+		<div class="price_line">
+			<span class="price"><%= number_to_currency(cartucho.price) %></span>
+			<%= button_to 'Add to Cart', line_items_path(cartucho_id: cartucho), remote: true %>
+		</div>
+	</div>
+<% end %>	
