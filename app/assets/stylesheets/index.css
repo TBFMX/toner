@@ -1,0 +1,55 @@
+body{ 
+	color: #241f20; 
+	border:#fb008d;
+}
+
+
+.logo {
+	width: 178px;
+	height: 138px;
+}
+
+.banner{
+	width: 846px;
+	height: 138px;
+}
+
+.imagen1 img {
+	width: 178;
+	height: 20px;
+}
+
+.imagen2 img {
+	width: 178px;
+	height: 266px;
+}
+
+.imagen3 img {
+	width: 178px;
+	height: 64px;
+}
+
+.texto{
+	width: 178px;
+	height: 385;
+	font-family: Myriad Pro;
+}
+
+.texto.blue{
+	color: #12a7e9;
+}
+
+.texto.pink{
+	color:#fb008d;
+}
+
+.texto.green{
+	color:#68cc2b;
+}
+
+.forter {
+	width: 1036px;
+	height: 25px;
+	font-family: Myriad Pro;
+	font-size: 12px;
+}
