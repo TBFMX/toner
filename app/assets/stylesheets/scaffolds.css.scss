@@ -1,15 +1,19 @@
 body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  background-color: #000;
+  color: #dddddd;
+  margin-top: 0;
+  margin-bottom: 0x;
+  margin-left: 140px;
+  margin-right:140px;
+  border-left-style:solid;
+  border-left-color:#fb008d;
+  border-right-style:solid;
+  border-right-color:#fb008d;  
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+ul {
+  font-family: Myriad Pro;
+  font-size: 16px;
 }
 
 pre {
@@ -18,13 +22,77 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
+ul.menu li {
+  width: 140px;
+  padding: .2em;
+  display: block;
+  float:left;
+  text-decoration: none;
+  border:0;
+}
+
+a1 {
+  color: #ddddd;
   &:visited {
-    color: #666;
+    color: #12a7e9;    
   }
   &:hover {
-    color: #fff;
+    color: #12a7e9;
+    background-color: #000;
+  }
+}
+
+b {
+  ccolor: #ddddd;
+  &:visited {
+    color: #fb008d;
+  }
+  &:hover {
+    color: #fb008d;
+    background-color: #000;
+  }
+}
+
+c {
+  color: #ddddd;
+  &:visited {
+    color: #feea3b;
+  }
+  &:hover {
+    color: #feea3b;
+    background-color: #000;
+  }
+}
+
+d {
+  color: #ddddd;
+  &:visited {
+    color: #68cc2b;
+  }
+  &:hover {
+    color: #68cc2b;
+    background-color: #000;
+  }
+}
+
+e {
+  color: #ddddd;
+  &:visited {
+    color: #12a7e9;
+  }
+  &:hover {
+    color: #12a7e9;
+    background-color: #000;
+  }
+}
+
+f {
+  color: #ddddd;
+  &:visited {
+    color: #fd982c;
+  }
+  &:hover {
+    color: #fd982c;
     background-color: #000;
   }
 }
@@ -54,7 +122,6 @@ div {
   background-color: #f0f0f0;
   h2 {
     text-align: left;
-    font-weight: bold;
     padding: 5px 5px 5px 15px;
     font-size: 12px;
     margin: -7px;
@@ -67,3 +134,85 @@ div {
     list-style: square;
   }
 }
+
+
+.logo {
+  width: 178px;
+  height: 138px;
+  float:left;
+}
+
+.banner{
+  width: 900px;
+  height: 138px;
+  float:right;
+}
+
+.imagen2 img {  
+  width: 178px;
+  height: 266px;
+}
+
+.imagen3 img {
+  width: 178px;
+  height: 64px;
+}
+
+
+.forter {
+  width: 1036px;
+  height: 25px;
+  font-family: Myriad Pro;
+  font-size: 12px;
+}
+
+.side {
+  width:180px;
+  height:900px;
+  float:left;
+
+}
+
+.textoP {
+  width:180px;  
+  float:center;
+  font-family:Myriad Pro;
+  font-size:20px;
+  color:#fb008d;
+  line-height:0px;
+}
+
+.textoB {
+  width:180px;  
+  float:center;
+  font-family:Myriad Pro;
+  font-size:18px;
+  color:#12a7e9; 
+  line-height:0px; 
+}
+
+.textop {
+  width:180px;  
+  float:center;
+  font-family:Myriad Pro;
+  font-size:12px;
+  color:#fb008d;
+}  
+
+.textop1 {
+  width:180px;  
+  float:center;
+  font-family:Myriad Pro;
+  font-size:17px;
+  color:#fb008d;
+  line-height:0px;
+}
+
+.textob {
+  width:180px;  
+  float:center;
+  font-family:Myriad Pro;
+  font-size:17px;
+  color:#12a7e9;
+  line-height:0px;
+}  

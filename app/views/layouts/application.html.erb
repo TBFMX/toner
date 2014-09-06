@@ -5,28 +5,58 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
+</head background="black">
 <body class='<%= controller.controller_name %>'>
-	<div id="banner">
-		<%= image_tag("logo.png") %>
-		<%= @page_title || "Toner Depot" %>
-	</div>
-	<div id="columns">
-		<div id="side">
-			<div id="cart">
-				<%= render @cart %>
-			</div>
+	<div class="side">
+		<class ="logo"><img src="/Imagenes/Inicio/logo.jpg">	
+		<br>
+		<br>
+		<br>
+		<br>
+		<p class="textoP"> Información </p>
+		<p class="textoB"> Df: 55723254 </p>
+		<p class="textoB"> Qro: 44301039 </p>
+		<p class="textop"> informacion@cwmex.com.mx </p> 
+		<p class="textoP"> Servicio de domicilio </p>
+		<p class="textop1"> sin costo <span style="color:#12a7e9;"> en Queretaro, </span></p>
+		<p class="textob"> DF y area metropolitana </p>
+		<br>
+		<br>
+		<p class="textoP"> Buscar cartucho </p>
+			<input type="text" >
+			<input type="text" >
+		<br>
+		<br>	
+		<p><span style="color:#31B404;font-size:20px;font-family:Myriad Pro;"> Buscar impresoras </span></p>
+			<input type="text" >
+			<input type="text" >
+		<br>
+		<br>
+		<class ="imagen2"><img src="/Imagenes/Inicio/imagen2.jpg">
+		<br>
+		<class ="imagen3"><img src="/Imagenes/Inicio/imagen3.jpg">
 
-			<ul>
-				<li><a href="http://www....">Home</a></li>
-				<li><a href="http://www..../faq">Questions</a></li>
-				<li><a href="http://www..../news">News</a></li>
-				<li><a href="http://www..../contact">Contact</a></li>
-			</ul>
+	</div>	
+	<div>
+		
+		<class ="banner"> <img src="/Imagenes/Inicio/banner.jpg">				
+		<ul class="menu">
+			<li><a1 href="http://www....">Inicio  </a><span style="color:#fb008d;"> | </span></li>			
+			<li><b href="http://www..../faq">Cartuchos  </b><span style="color:#fb008d;"> | </span></li>			
+			<li><c href="http://www..../news">Renta de equipo  </c><span style="color:#fb008d;"> | </span></li>		
+			<li><d href="http://www..../contact">Distribuidores  </d><span style="color:#fb008d;"> | </span></li>
+			<li><e href="http://www..../contact">Quienes somos  </e><span style="color:#fb008d;"> | </span></li>
+			<li><f href="http://www..../contact">Contactanos </f><span style="color:#fb008d;"> | </span></li>
+		</ul>
+	</div>
+	<div id="columns">		
+		<div id="cart">
+				<%#= render @cart %>
 		</div>
 		<div id="main">
 			<%= yield %>
 		</div>
 	</div>
+
 </body>
 </html>
