@@ -1,20 +1,9 @@
-<br>
-<br>
-<% if notice %>
-<p id="notice"><%= notice %></p>
-<% end %>
-<!--
-<h1>Catalogo de Toners</h1>
+  <title>Toner</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 
-<% @cartuchos.each do |cartucho| %>
-	<div class="entry">
-		<%= image_tag(cartucho.image_url) %>
-		<h3><%= cartucho.title %></h3>
-		<%= sanitize(cartucho.description) %>
-		<div class="price_line">
-			<span class="price"><%= number_to_currency(cartucho.price) %></span>
-			<%= button_to 'Add to Cart', line_items_path(cartucho_id: cartucho), remote: true %>
-		</div>
-	</div>
-<% end %>	
--->
+
+<body class='<%#= controller.controller_name %>' >
+
+</body>
