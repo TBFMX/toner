@@ -90,17 +90,13 @@
 }
 
 .sp-selector-1:checked ~ .sp-arrow.sp-a2,
-.sp-selector-2:checked ~ .sp-arrow.sp-a3,
-.sp-selector-3:checked ~ .sp-arrow.sp-a4,
-.sp-selector-4:checked ~ .sp-arrow.sp-a5 {
+.sp-selector-2:checked ~ .sp-arrow.sp-a3, {
     right: 15px;
     display: block;
     background-position: top right;
 }
 .sp-selector-2:checked ~ .sp-arrow.sp-a1,
-.sp-selector-3:checked ~ .sp-arrow.sp-a2,
-.sp-selector-4:checked ~ .sp-arrow.sp-a3,
-.sp-selector-5:checked ~ .sp-arrow.sp-a4 {
+.sp-selector-3:checked ~ .sp-arrow.sp-a2, {
     left: 15px;
     display: block;
     background-position: top left;
@@ -116,28 +112,18 @@
 
 input.sp-selector-1:checked ~ .sp-content {
     background-position: 0 0;
-    background-color: #727b7f;
 }
  
 input.sp-selector-2:checked ~ .sp-content {
     background-position: -100px 0;
-    background-color: #7f7276;
+
 }
  
 input.sp-selector-3:checked ~ .sp-content {
     background-position: -200px 0;
-    background-color: #737f72;
+
 }
- 
-input.sp-selector-4:checked ~ .sp-content {
-    background-position: -300px 0;
-    background-color: #79727f;
-}
- 
-input.sp-selector-5:checked ~ .sp-content {
-    background-position: -400px 0;
-    background-color: #7d7f72;
-}
+
 
 input.sp-selector-1:checked ~ .sp-content .sp-parallax-bg {
     background-position: 0 0;
@@ -151,13 +137,7 @@ input.sp-selector-3:checked ~ .sp-content .sp-parallax-bg {
     background-position: -400px 0;
 }
  
-input.sp-selector-4:checked ~ .sp-content .sp-parallax-bg {
-    background-position: -600px 0;
-}
- 
-input.sp-selector-5:checked ~ .sp-content .sp-parallax-bg {
-    background-position: -800px 0;
-}
+
 
 .sp-slider {
     position: relative;
@@ -198,18 +178,10 @@ input.sp-selector-3:checked ~ .sp-content .sp-slider {
     left: -200%;
 }
  
-input.sp-selector-4:checked ~ .sp-content .sp-slider {
-    left: -300%;
-}
- 
-input.sp-selector-5:checked ~ .sp-content .sp-slider {
-    left: -400%;
-}
 
 input.sp-selector-1:checked ~ .sp-content .sp-slider > li:first-child,
 input.sp-selector-2:checked ~ .sp-content .sp-slider > li:nth-child(2),
 input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3),
-input.sp-selector-4:checked ~ .sp-content .sp-slider > li:nth-child(4),
-input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
+{
     opacity: 1;
 }
