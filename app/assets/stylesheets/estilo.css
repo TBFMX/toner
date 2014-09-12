@@ -1,0 +1,220 @@
+body {
+  position: static;
+  background-image: url("/Imagenes/Inicio/fondo.jpg");
+  color: #dddddd;
+  margin-top:0px;
+}
+
+/*----------------------Div principal ------------------*/
+
+.principal{
+	background-color: #241f20;
+	width:1024px;
+	min-height:930px;
+	max-height:100%;
+	margin: 0px auto 0px auto;
+	border-bottom:6px solid #fb008d;
+	border-left:6px solid #fb008d;
+	border-right:6px solid #fb008d;
+	font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+}
+
+/*--------------------Divs division principal ---------------*/
+.izq_contenido{
+	width: 178px;
+	min-height: 900px;
+  max-height: 100%;
+	float: left;
+}	
+
+.der_contenido{
+	width: 846px;
+	min-height: 900px;
+  max-height: 100%;  
+	float: right;
+	
+}
+
+.footer{
+ width: 1024px;
+ height: 25px;
+ font-size: 12px;
+ float: left;
+}
+
+/*--------------------Divs division izquierdo ---------------*/
+
+.izq_contenido .side {
+  width:178px;
+  height:930px;
+  float:left;
+ } 
+
+.izq_contenido .logo {
+  width: 178px;
+  height: 140px;
+  float:left;
+  margin-bottom: 20px;
+}
+
+.izq_contenido .imagen2 img {  
+  width: 178px;
+  height: 266px;
+  margin-top: 30px; 
+}
+
+.izq_contenido .imagen3 img {
+  width: 178px;
+  height: 64px;
+}
+
+.izq_contenido p{
+	margin-left: 10px;
+}
+
+.izq_contenido .titulorosa,
+.izq_contenido .tituloazul,
+.izq_contenido .correo,
+.izq_contenido .tituloazul2,
+.izq_contenido .titulorosa3,
+.izq_contenido .tituloazul3,
+.izq_contenido .tituloverdetext,
+.izq_contenido .titulorosatext,{
+   width:160px;    
+   margin-top: 10px;    
+   margin-left: 10px;  
+}
+
+.izq_contenido .titulorosa{
+    font-size:20px;
+    color:#fb008d;
+    letter-spacing: 2px;
+}
+
+.izq_contenido .tituloazul{
+   font-size:18px;
+   color:#12a7e9; 
+   letter-spacing: 0px;
+   margin: 0;
+}
+
+.izq_contenido .correo{
+    font-size:10px;
+    color:#fb008d;
+}
+
+.tituloazul2{
+   font-size:15px;
+   color:#12a7e9; 
+}
+
+.izq_contenido .titulorosa3,
+.izq_contenido .tituloazul3{
+   font-size:13px; 
+}
+
+.izq_contenido .titulorosa3{
+   color:#fb008d;
+}
+
+.izq_contenido .tituloazul3{
+   color:#12a7e9;
+}
+
+.izq_contenido .tituloverdetext,
+.izq_contenido .titulorosatext{
+   font-size:18px;
+   margin: 5px 0 0 10px;
+}
+
+.izq_contenido .tituloverdetext{
+    color:#68cc2b;
+}
+
+.izq_contenido .titulorosatext{
+    color:#fb008d;
+}
+
+.izq_contenido input{
+	width: 80%;
+    margin: 5px 10px 0px 10px;
+}
+
+/*--------------------Divs division derecho ---------------*/
+
+.der_contenido .banner{
+  width: 846px;
+  height: 138px;
+}
+
+.der_contenido .barra {
+  color: #fb008d;
+}
+
+.der_contenido .menu{
+  width: 846px;
+  height: 20px;
+  list-style:none;
+  margin:0;
+  padding:0;  
+}
+
+.der_contenido .menu ul {
+  height: 20px;
+  font-size: 16px;
+  color: #dddddd;  
+  float: left;
+}
+
+.der_contenido .menu ul li {
+  float:left;
+  border:0;
+}
+
+.der_contenido .menu ul li a{
+  display:block;   
+  color: #FFF;
+  text-decoration: none;
+  text-align: left;
+  border-left: 2px solid #fb008d;
+  padding: 1px 8px;
+  letter-spacing: 2px;
+}
+
+/*----------------footer --------------*/
+
+.footer ul {
+  height: 20px;
+  font-size: 10px;
+  color: #dddddd;  
+  float: left;
+}
+
+.footer ul li {
+  float:left;
+  border:0;
+}
+
+.footer ul li a{
+  display:block;   
+  color: #FFF;
+  text-decoration: none;
+  text-align: left;
+  border-left: 2px solid #fb008d;
+  padding: 1px 2px;
+  letter-spacing: 2px;
+}
+/*----------- contenido ----------------*/
+
+.p1{
+  text-align: center;
+  font-size:27;
+  font: bold;
+  text-decoration: underline;
+}
+
+.bottom{
+  width: 200px;
+  height: 245px;
+  float: left;
+}
