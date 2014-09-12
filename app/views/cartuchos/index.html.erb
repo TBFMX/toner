@@ -17,9 +17,9 @@
       </dl>
     </td>
     <td class="list_actions">
-     <%= link_to 'Show', cartucho %><br/>
-     <%= link_to 'Edit', edit_cartucho_path(cartucho) %><br/>
-     <%= link_to 'Destroy', cartucho, method: :delete, data: { confirm: 'Are you sure?' } %>
+     <%#= link_to 'Show', cartucho %><br/>
+     <%#= link_to 'Edit', edit_cartucho_path(cartucho) %><br/>
+     <%#= link_to 'Destroy', cartucho, method: :delete, data: { confirm: 'Are you sure?' } %>
     </td>
   </tr>
 <% end %>
@@ -49,9 +49,9 @@
         <td><%= cartucho.brand %></td>
         <td><%= cartucho.model %></td>
         <td><%= cartucho.color %></td>
-        <td><%= link_to 'Show', cartucho %></td>
-        <td><%= link_to 'Edit', edit_cartucho_path(cartucho) %></td>
-        <td><%= link_to 'Destroy', cartucho, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Show', cartucho %></td>
+        <td><%#= link_to 'Edit', edit_cartucho_path(cartucho) %></td>
+        <td><%#= link_to 'Destroy', cartucho, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody> -->
@@ -59,4 +59,4 @@
 
 <br>
 
-<%= link_to 'New Cartucho', new_cartucho_path %>
+<%#= link_to 'New Cartucho', new_cartucho_path %>

@@ -5,7 +5,12 @@ Rails.application.routes.draw do
 
   get 'store/index'
 
-  resources :cartuchos
+  controller :cartuchos do 
+    get 'cartuchos/new' => :new
+    get 'cartuchos/edit' => :edit
+    get 'cartuchos/show' => :show
+    get 'cartuchos/' => :index, :as => 'cartuchos'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
