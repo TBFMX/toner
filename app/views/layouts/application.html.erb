@@ -5,16 +5,18 @@
   	<div class="principal"> 
 		<div class="izq_contenido"><%= render partial: "layouts/side" %></div>
 		<div class="der_contenido">
-			<div class="banner"><%= render partial: "layouts/menu" %></div>
+			<div class="banner"><img src="/Imagenes/Inicio/banner.jpg"></div>
+			<div class="menu"><%= render partial: "layouts/menu" %></div>
 			<div class="contenido">
 				<% if notice %>
 					<p id="notice"><%= notice %></p>
 				<% end %>
-				<%= render partial: "layouts/content" %></div>
+				<%= render partial: "layouts/content" %>
 				<%= render partial: "layouts/imgs" %>
-	</div>
-		<div class="footer"></div>	
-   	</div>
-		<div id="main">
-			<%= yield %>
+			</div>
 		</div>
+		<div class="footer"><%= render partial: "layouts/footer" %></div>
+	</div>
+	<div id="main">
+		<%= yield %>
+	</div>

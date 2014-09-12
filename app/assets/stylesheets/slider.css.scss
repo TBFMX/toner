@@ -1,3 +1,5 @@
+/*---------- Estilo para el slider de la página principal --------------*/
+
 .sp-slideshow {
     position: relative;
     margin: 20px auto;
@@ -37,10 +39,10 @@
  
 .sp-slideshow input + label {
     position: absolute;
-    bottom: 5px;
+    bottom: 0px;
     left: 50%;
-    width: 6px;
-    height: 6px;
+    width: 10px;
+    height: 10px;
     display: block;
     z-index: 1000;
     border: 3px solid #fff;
