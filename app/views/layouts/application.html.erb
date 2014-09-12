@@ -11,12 +11,8 @@
 				<% if notice %>
 					<p id="notice"><%= notice %></p>
 				<% end %>
-				<%= render partial: "layouts/content" %>
-				<%= render partial: "layouts/imgs" %>
+				<%= yield %>
 			</div>
 		</div>
 		<div class="footer"><%= render partial: "layouts/footer" %></div>
-	</div>
-	<div id="main">
-		<%= yield %>
 	</div>

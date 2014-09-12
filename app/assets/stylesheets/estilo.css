@@ -46,7 +46,7 @@ body {
 
 .izq_contenido .side {
   width:178px;
-  height:930px;
+  height:900px;
   float:left;
  } 
 
@@ -157,11 +157,12 @@ body {
   list-style:none;
   margin:0;
   padding:0;  
+  font-weight: bold;
 }
 
 .der_contenido .menu ul {
   height: 20px;
-  font-size: 16px;
+  font-size: 14px;
   color: #dddddd;  
   float: left;
 }
@@ -171,23 +172,59 @@ body {
   border:0;
 }
 
-.der_contenido .menu ul li a{
+.der_contenido .menu ul li .menu1,
+.der_contenido .menu ul li .menu2,
+.der_contenido .menu ul li .menu3,
+.der_contenido .menu ul li .menu4,
+.der_contenido .menu ul li .menu5,
+.der_contenido .menu ul li .menu6{
   display:block;   
-  color: #FFF;
+  color: #DDDDDD;
   text-decoration: none;
   text-align: left;
   border-left: 2px solid #fb008d;
   padding: 1px 8px;
   letter-spacing: 2px;
+} 
+
+.der_contenido .menu ul li .menu1_1,
+.der_contenido .menu ul li .menu1:hover{
+  color: #12A7E9;
+}
+
+.der_contenido .menu ul li .menu2_1,
+.der_contenido .menu ul li .menu2:hover{
+  color: #fb008d;
+}
+
+.der_contenido .menu ul li .menu3_1,
+.der_contenido .menu ul li .menu3:hover{
+  color: #Feea3b;
+}
+
+.der_contenido .menu ul li .menu4_1,
+.der_contenido .menu ul li .menu4:hover{
+  color: #68cc2b;
+}
+
+.der_contenido .menu ul li .menu5_1,
+.der_contenido .menu ul li .menu5:hover{
+  color: #12A7E9;
+}
+
+.der_contenido .menu ul li .menu6_1,
+.der_contenido .menu ul li .menu6:hover{
+  color: #fd982c;
 }
 
 /*----------------footer --------------*/
 
 .footer ul {
+  list-style:none;
+  width: 1024px;
   height: 20px;
-  font-size: 10px;
-  color: #dddddd;  
-  float: left;
+  font-size: 9px;
+  color: #dddddd; 
 }
 
 .footer ul li {
@@ -200,9 +237,10 @@ body {
   color: #FFF;
   text-decoration: none;
   text-align: left;
-  border-left: 2px solid #fb008d;
-  padding: 1px 2px;
-  letter-spacing: 2px;
+  border-left: 1px solid #fb008d;
+  border-right: 1px solid #fb008d;
+  padding: 1px 8px;
+  letter-spacing: 1px;
 }
 /*----------- contenido ----------------*/
 
