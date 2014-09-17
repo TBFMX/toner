@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_action :set_cart, only: [:show, :edit, :update, :destroy]
+  before_action :set_cart, only: [:show, :edit, :update, :destroy, :enviar]
 
   # GET /carts
   # GET /carts.json
@@ -20,6 +20,8 @@ class CartsController < ApplicationController
   # GET /carts/1/edit
   def edit
   end
+
+
 
   # POST /carts
   # POST /carts.json
@@ -61,6 +63,22 @@ class CartsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def enviar
+    @cart = Cart.find(params[:id])
+    @aux = @cart
+    mail = params[:mail]
+    Mailer.Order(@aux).deliver
+    Mailer.Confirmation(mail).deliver
+    @cart.destroy if @cart.id == session[:cart_id]
+    session[:cart_id] = nil
+    respond_to do |format|
+      format.html { 
+
+       }
+      format.json { head :no_content }
+    end
+  end  
 
   private
     # Use callbacks to share common setup or constraints between actions.
