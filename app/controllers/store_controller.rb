@@ -4,5 +4,7 @@ class StoreController < ApplicationController
   def index
   	@cartuchos = Cartucho.order(:title)
   end
+  def quienes
+  end
 end
 
