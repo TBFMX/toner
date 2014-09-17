@@ -1,11 +1,26 @@
-.cartuchos{
-	width: 100%;
-	height: 100%;
+.tabla_lista_articulos{
+	width: 80%;
+	margin: 20px auto 0 auto;
+	color: #a6a6a6;
 }
 
-.cartuchos thead{
+.tabla_lista_articulos th{
 
 }
 
+.tabla_lista_articulos td{
+
+}
+
+.cartuchos_marcas{
+	width: 80%;
+	margin: 0 auto 0 auto;
+	vertical-align: bottom;
+	margin-top: 450px;
+}
+
+.cartuchos_marcas img{
+	padding-left: 20px;
+}
 /*------------------Lista venta --------------------*/
 
