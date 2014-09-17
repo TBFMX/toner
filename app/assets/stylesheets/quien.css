@@ -1,0 +1,14 @@
+.der_contenido .contenido .somos {
+	padding-top: 10%;
+	padding-left: 3%;
+	padding-right: 5%;
+	font-family: "Calibri";
+	font-size: 14px;
+	text-align: left;
+}
+
+.der_contenido .contenido .impresora {
+	padding-top: 170px;
+	padding-right: 8px;
+	float: right;
+} 
