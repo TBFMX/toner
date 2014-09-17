@@ -5,3 +5,4 @@ class StoreController < ApplicationController
   	@cartuchos = Cartucho.order(:title)
   end
 end
+

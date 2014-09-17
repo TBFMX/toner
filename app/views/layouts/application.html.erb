@@ -1,34 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
   <title>Toner</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body class='<%= controller.controller_name %>'>
-	<div id="banner">
-		<%= image_tag("logo.png") %>
-		<%= @page_title || "Toner Depot" %>
-	</div>
-	<div id="columns">
-		<div id="side">
-			<div id="cart">
-				<%= render @cart %>
+  	<div class="principal"> 
+		<div class="izq_contenido"><%= render partial: "layouts/side" %></div>
+		<div class="der_contenido">
+			<div class="banner"><img src="/Imagenes/Inicio/banner.jpg"></div>
+			<div class="menu"><%= render partial: "layouts/menu" %></div>
+			<div class="contenido">
+				<% if notice %>
+					<p id="notice"><%= notice %></p>
+				<% end %>
+				<%= yield %>
 			</div>
-
-			<ul>
-			<!--	
-				<li><a href="http://www....">Home</a></li>
-				<li><a href="http://www..../faq">Questions</a></li>
-				<li><a href="http://www..../news">News</a></li>
-				<li><a href="http://www..../contact">Contact</a></li>
-			-->	
-			</ul>
 		</div>
-		<div id="main">
-			<%= yield %>
-		</div>
+		<div class="footer"><%= render partial: "layouts/footer" %></div>
 	</div>
-</body>
-</html>
