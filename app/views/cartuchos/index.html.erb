@@ -1,60 +1,27 @@
 <h1>Listing cartuchos</h1>
 
 <table>
-<% @cartuchos.each do |cartucho| %>
-  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-    <td>
-      <%= image_tag(cartucho.image_url, class: 'list_image') %>
-    </td>
-    <td class="list_description">
-      <dl>
-       <dt><%= cartucho.title %></dt>
-       <dd><%= truncate(strip_tags(cartucho.description), length: 80) %></dd>
-       <dd><%= cartucho.price %></dd>
-       <dd><%#= cartucho.brand %></dd>
-       <dd><%#= cartucho.model %></dd>
-       <dd><%#= cartucho.color %></dd>
-      </dl>
-    </td>
-    <td class="list_actions">
-     <%#= link_to 'Show', cartucho %><br/>
-     <%#= link_to 'Edit', edit_cartucho_path(cartucho) %><br/>
-     <%#= link_to 'Destroy', cartucho, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </td>
+  <tr>
+    <th>Marca</th>
+    <th>Modelo</th>
+    <th>Precio</th>
+    <th>Quantidad</th>
+    <th>Total</th>
+    <th></th>
   </tr>
-<% end %>
-
-
-
-<!--   <thead>
+  <% @cartuchos.each do |cartucho| %>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Price</th>
-      <th>Brand</th>
-      <th>Model</th>
-      <th>Color</th>
-      <th colspan="3"></th>
+      <td><%=cartucho.brand%></td>
+      <td><%=cartucho.model%></td>
+      <td><%=cartucho.price%></td>
+      <%= form_tag(line_items_path, remote: true) do %>
+        <td><%= text_field_tag 'quantity'%></td>
+        <td><%= text_field_tag 'total' %></td> <!-- el id es 'total' -->  
+        <td><%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar a Pedido'%></td>
+      <%end%>
     </tr>
-  </thead>
+  <% end %>
 
-  <tbody>
-    <% @cartuchos.each do |cartucho| %>
-      <tr>
-        <td><%= cartucho.title %></td>
-        <td><%= cartucho.description %></td>
-        <td><%= cartucho.image_url %></td>
-        <td><%= cartucho.price %></td>
-        <td><%= cartucho.brand %></td>
-        <td><%= cartucho.model %></td>
-        <td><%= cartucho.color %></td>
-        <td><%#= link_to 'Show', cartucho %></td>
-        <td><%#= link_to 'Edit', edit_cartucho_path(cartucho) %></td>
-        <td><%#= link_to 'Destroy', cartucho, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody> -->
 </table>
 
 <br>
