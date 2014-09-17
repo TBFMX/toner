@@ -69,7 +69,7 @@ class CartsController < ApplicationController
     @aux = @cart
     mail = params[:mail]
     Mailer.Order(@aux).deliver
-    Mailer.Confirmation(mail).deliver
+    Mailer.Confirmation(mail, @aux).deliver
     @cart.destroy if @cart.id == session[:cart_id]
     session[:cart_id] = nil
     respond_to do |format|

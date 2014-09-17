@@ -28,9 +28,9 @@ class Mailer < ActionMailer::Base
   #
   #   en.mailer.Confirmation.subject
   #
-  def Confirmation(mail)
+  def Confirmation(email,cart)
     #@greeting = "Hi"
     @cart = Cart.find(cart)
-    mail to: "mail"
+    mail to: email
   end
 end
