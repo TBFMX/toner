@@ -27,12 +27,20 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
     cartucho = Cartucho.find(params[:cartucho_id])
-    @line_item = @cart.add_cartucho(cartucho.id)
+    @line_item = @cart.add_cartucho(cartucho.id, params[:quantity])
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @store_url }
-        format.js   { @current_item = @line_item }
+        format.html { redirect_to @store_url 
+          puts "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+          puts "agregado con exito"
+          puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+        }
+        format.js   { @current_item = @line_item 
+          puts "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+          puts "agregado con exito"
+          puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+        }
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
