@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :brands
+
   resources :line_items
 
   resources :carts
