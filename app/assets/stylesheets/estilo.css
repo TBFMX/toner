@@ -220,6 +220,13 @@ body {
 
 /*---------- fin del menu ----------*/
 
+.der_contenido .contenido_index{
+  min-width: 100%;
+  height: 740px;
+  background: #000;
+  color:#FFF;
+}
+
 .der_contenido .contenido{
   min-width: 100%;
   height: 740px;
@@ -227,14 +234,14 @@ body {
   color:#000;
 }
 
-/*----------------footer --------------*/
+/*---------------- footer --------------*/
 
 .footer ul {
   list-style:none;
   width: 1024px;
   height: 20px;
   font-size: 9px;
-  color: #dddddd; 
+  color: #dddddd;
 }
 
 .footer ul li {
