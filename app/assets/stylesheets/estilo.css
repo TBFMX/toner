@@ -145,6 +145,22 @@ body {
 .der_contenido .banner{
   width: 846px;
   height: 138px;
+  z-index: 1;
+}
+
+.der_contenido .link{
+  z-index: 3; 
+  float: right;
+}
+
+.der_contenido .face{
+  z-index: 3;
+  float: right;
+}
+
+.der_contenido .twitter{
+  z-index: 3;
+  float: right;
 }
 
 .der_contenido .barra {
