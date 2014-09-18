@@ -143,24 +143,14 @@ body {
 /*--------------------Divs division derecho ---------------*/
 
 .der_contenido .banner{
+  background: url("/Imagenes/Inicio/banner.jpg");
   width: 846px;
   height: 138px;
-  z-index: 1;
 }
 
-.der_contenido .link{
-  z-index: 3; 
+.der_contenido .banner img{
   float: right;
-}
-
-.der_contenido .face{
-  z-index: 3;
-  float: right;
-}
-
-.der_contenido .twitter{
-  z-index: 3;
-  float: right;
+  margin-top: 75px;
 }
 
 .der_contenido .barra {
