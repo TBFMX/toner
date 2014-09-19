@@ -22,5 +22,9 @@
 .cartuchos_marcas img{
 	padding-left: 20px;
 }
+
+.precios th td{
+	border-collapse: 2px solid #070719 ;
+}
 /*------------------Lista venta --------------------*/
 

@@ -11,7 +11,7 @@
   <% @cartuchos.each do |cartucho| %>
     <tr>
       <td><%=cartucho.brand%></td>
-      <td><%=cartucho.model%></td>
+      <td><%=cartucho.clave%></td>
       <td><%=cartucho.price%></td>
       <%= form_tag(line_items_path, remote: true) do %>
         <td><%= text_field_tag 'quantity'%></td>
@@ -20,8 +20,8 @@
       <%end%>
     </tr>
   <% end %>
-
 </table>
+<%= will_paginate(@cartuchos) %>
 <br>
 <div class="cartuchos_marcas">
   <img src="/Imagenes/fondos/HP.jpg"> 
