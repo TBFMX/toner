@@ -21,6 +21,10 @@ class CartuchosController < ApplicationController
   def edit
   end
 
+  def list
+    @cartuchos = Cartucho.all
+  end  
+
   # POST /cartuchos
   # POST /cartuchos.json
   def create

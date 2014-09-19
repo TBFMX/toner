@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140829221412) do
+ActiveRecord::Schema.define(version: 20140919173140) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20140829221412) do
     t.decimal  "price_40",    precision: 8, scale: 2
     t.decimal  "price_21",    precision: 8, scale: 2
     t.decimal  "price_10",    precision: 8, scale: 2
+    t.string   "clave"
+    t.integer  "rendimiento"
   end
 
   create_table "line_items", force: true do |t|
