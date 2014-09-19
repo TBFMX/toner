@@ -6,7 +6,7 @@ class Mailer < ActionMailer::Base
   #
   #   en.mailer.Contact.subject
   #
-  def Contact
+  def Contact(array)
     @greeting = "Hi"
 
     mail to: "to@example.org"

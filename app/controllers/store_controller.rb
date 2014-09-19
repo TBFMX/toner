@@ -6,5 +6,10 @@ class StoreController < ApplicationController
   end
   def quienes
   end
+  def contacto
+  end
+  def contacto_send
+  	Mailer.Contact(array).send
+  end	
 end
 
