@@ -9,14 +9,18 @@ Rails.application.routes.draw do
 
   controller :cartuchos do 
     get 'cartuchos/new' => :new
-    get 'cartuchos/edit' => :edit
-    get 'cartuchos/show' => :show
-    get 'cartuchos/' => :index, :as => 'cartuchos'
+    get 'cartuchos/edit/:id' => :edit, :as => 'edit_cartucho'
+    get 'cartucho/:id' => :show
+    post 'cartuchos' =>:create
+    post 'cartuchos/:id' => :update
+    get 'cartuchos/' => :index
+    get 'cartuchos/lista' =>:list , :as => 'list'
   end
+
 
   controller :store do
     get 'quienes/' => :quienes, :as => 'quienes'
-   end  
+  end  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
