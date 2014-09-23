@@ -5,6 +5,7 @@ class CartuchosController < ApplicationController
   # GET /cartuchos.json
   def index
     @cartuchos = Cartucho.all
+    @cartuchos = Cartucho.order("clave ASC").paginate(:page => params[:page], :per_page => 20) 
   end
 
   # GET /cartuchos/1
@@ -20,6 +21,10 @@ class CartuchosController < ApplicationController
   # GET /cartuchos/1/edit
   def edit
   end
+
+  def list
+    @cartuchos = Cartucho.all
+  end  
 
   # POST /cartuchos
   # POST /cartuchos.json

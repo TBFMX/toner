@@ -5,7 +5,11 @@
   	<div class="principal"> 
 		<div class="izq_contenido"><%= render partial: "layouts/side" %></div>
 		<div class="der_contenido">
-			<div class="banner"><img src="/Imagenes/Inicio/banner.jpg"></div>
+			<div class="banner" >
+				<a href="http://www.facebook.com"><img class="face" src="/Imagenes/Inicio/facebook.jpg"></a>
+				<a href="http://www.twitter.com"><img class="twiter" src="/Imagenes/Inicio/twitter.jpg"></a>
+				<a href="http://www.linkedin.com"><img class="link" src="/Imagenes/Inicio/linkedin.jpg"></a>
+			</div>
 			<div class="menu"><%= render partial: "layouts/menu" %></div>
 			<div class="contenido">
 				<% if notice %>

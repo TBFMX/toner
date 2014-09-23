@@ -143,8 +143,14 @@ body {
 /*--------------------Divs division derecho ---------------*/
 
 .der_contenido .banner{
+  background: url("/Imagenes/Inicio/banner.jpg");
   width: 846px;
   height: 138px;
+}
+
+.der_contenido .banner img{
+  float: right;
+  margin-top: 75px;
 }
 
 .der_contenido .barra {
@@ -174,11 +180,17 @@ body {
 }
 
 .der_contenido .menu ul li .menu1,
+.der_contenido .menu ul li .menu1_1,
 .der_contenido .menu ul li .menu2,
+.der_contenido .menu ul li .menu2_1,
 .der_contenido .menu ul li .menu3,
+.der_contenido .menu ul li .menu3_1,
 .der_contenido .menu ul li .menu4,
+.der_contenido .menu ul li .menu4_1,
 .der_contenido .menu ul li .menu5,
-.der_contenido .menu ul li .menu6{
+.der_contenido .menu ul li .menu5_1,
+.der_contenido .menu ul li .menu6,
+.der_contenido .menu ul li .menu6_1{
   display:block;   
   color: #DDDDDD;
   text-decoration: none;

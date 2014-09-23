@@ -1,20 +1,18 @@
 <div class="cintilla_cartuchos">Cartuchos</div>
-<h1>Listing cartuchos</h1>
-
-<table>
+<table class="tabla_lista_articulos">
   <tr>
     <th>Marca</th>
     <th>Modelo</th>
     <th>Precio</th>
-    <th>Quantidad</th>
+    <th>Cantidad</th>
     <th>Total</th>
     <th></th>
   </tr>
   <% @cartuchos.each do |cartucho| %>
     <tr>
       <td><%=cartucho.brand%></td>
-      <td><%=cartucho.model%></td>
-      <td><%=cartucho.price%></td>
+      <td><%=cartucho.clave%></td>
+      <td><%= number_to_currency(cartucho.price) %></td>
       <%= form_tag(line_items_path, remote: true) do %>
         <td><%= text_field_tag 'quantity'%></td>
         <td><%= text_field_tag 'total' %></td> <!-- el id es 'total' -->  
@@ -22,9 +20,13 @@
       <%end%>
     </tr>
   <% end %>
-
 </table>
-
+<%= will_paginate(@cartuchos) %>
 <br>
+<div class="cartuchos_marcas">
+  <img src="/Imagenes/fondos/HP.jpg"> 
+  <img src="/Imagenes/fondos/brother.jpg">
+  <img src="/Imagenes/fondos/samsung.jpg">
+</div>
 
 <%#= link_to 'New Cartucho', new_cartucho_path %>

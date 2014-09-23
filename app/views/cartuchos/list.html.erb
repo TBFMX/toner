@@ -1,0 +1,20 @@
+
+<table class="precios">
+  <tr>
+    <th>Marca</th>
+    <th>Clave</th>
+    <th>Rendimiento</th>
+    <th>Precio Publico</th>
+    <th></th>
+  </tr>
+  <% @cartuchos.each do |cartucho| %>
+    <tr>
+      <td><%=cartucho.brand%></td>
+      <td><%=cartucho.clave%></td>
+      <td><%=cartucho.rendimiento%></td>
+      <td><%=cartucho.price%></td>  
+      <td><%= link_to 'Editar', edit_cartucho_path(cartucho) %></td>
+    </tr>
+  <% end %>
+
+</table>
