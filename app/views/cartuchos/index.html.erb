@@ -12,7 +12,7 @@
     <tr>
       <td><%=cartucho.brand%></td>
       <td><%=cartucho.clave%></td>
-      <td><%=number_to_currency(cartucho.price, separator: ",", delimiter: ".")%></td>
+      <td><%= number_to_currency(cartucho.price) %></td>
       <%= form_tag(line_items_path, remote: true) do %>
         <td><%= text_field_tag 'quantity'%></td>
         <td><%= text_field_tag 'total' %></td> <!-- el id es 'total' -->  

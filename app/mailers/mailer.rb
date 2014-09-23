@@ -9,7 +9,7 @@ class Mailer < ActionMailer::Base
   def Contact(array)
     @greeting = "Hi"
 
-    mail to: "to@example.org"
+    mail to: "jcmartinez@cwmex.com.mx"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml

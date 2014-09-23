@@ -30,11 +30,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 group :production do
-<<<<<<< HEAD
-	#gem 'mysql2'
-=======
 	gem 'pg'
->>>>>>> e50e27cd79b6fb625c3758efd416aa22d7667bf5
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

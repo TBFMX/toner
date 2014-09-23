@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     post 'cartuchos/:id' => :update
     get 'cartuchos/' => :index
     get 'cartuchos/lista' =>:list , :as => 'list'
+    post 'cartuchos/search' => :search, :as => 'search'
   end
 
 
