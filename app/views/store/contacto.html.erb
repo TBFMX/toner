@@ -1,0 +1,38 @@
+<div class="cintilla_contactos">Contactanos?</div> 
+<%= form_tag sender_path do  %>
+
+  <%#= link_to contacto_path %>
+  <!--
+  <%# if @contactanos.errors.any? %>
+    <div id="error_explanation">
+      <h2><%#= pluralize(@contactanos.errors.count, "error") %> prohibited this contactanos from being saved:</h2>
+
+      <ul>
+      <%# @contactanos.errors.full_messages.each do |message| %>
+        <li><%#= message %></li>
+      <%# end %>
+      </ul>
+    </div>
+  <%# end %>
+  -->
+  <div class="field0">
+    <%= label_tag "name", "Nombre:" %><br>
+    <%= text_field_tag "name","" ,  required: true %>
+  </div>
+  <div class="field">
+    <%= label_tag  "email", "E-mail" %><br>
+    <%= text_field_tag "email","" , required: true, pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+([\.][a-zA-Z0-9-]{2,3}){1,2}$", title: "Ingrese un formato válido Micorreo@tupagina.com"  %>
+  </div>
+  <div class="field">
+    <%= label_tag  "contactanos", "Teléfono:"  %><br>
+    <%= text_field_tag "contactanos","" , required: true %>
+  </div>
+  <div class="field2">
+    <%= label_tag  "mensaje", "Mensaje:"  %></div>
+  <div class="textbox0">
+    <%= text_area_tag "mensaje","" , required: true  %>
+  </div>  
+  <div class="actions">
+    <%= submit_tag "Enviar" %>
+  </div>
+<% end %>

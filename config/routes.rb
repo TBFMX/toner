@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   controller :store do
     get 'quienes/' => :quienes, :as => 'quienes'
+    get 'contacto/' => :contacto, :as => 'contacto'
+    post 'contacto/' => :contacto_send, :as => 'sender' #sender_path
   end  
 
   # The priority is based upon order of creation: first created -> highest priority.

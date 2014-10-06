@@ -10,12 +10,18 @@ else
 	menu5 = "menu5" 
 end %>
 
+<% if request.fullpath == "/Contactanos"
+	menu6 = "menu6_1" 
+else
+	menu6 = "menu6" 
+end %>
+
 <ul class="menu">
 	<li><%= link_to "Inicio", store_path, class: "menu1" %> </li>			
 	<li><%= link_to "Cartuchos", cartuchos_path, class: menu2 %></li>			
 	<li><a href="#" class="menu3">Renta de equipo</a></li>		
 	<li><a href="#" class="menu4">Distribuidores</a></li>
 	<li><%= link_to "Quienes Somos", quienes_path, class: menu5 %></li>	
-	<li><a href="#" class="menu6">Contactanos</a></li>
+	<li><%= link_to "Contactanos", contacto_path, class: menu6 %></li>	
 </ul>	
 		

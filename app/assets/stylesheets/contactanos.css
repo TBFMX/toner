@@ -1,0 +1,33 @@
+.field0{
+	font-family: "Myriad Pro";
+	font-size: 16px;
+	padding: 12px;
+	padding-top: 60;
+	padding-left: 75px; 
+}
+.field{
+	font-family: "Myriad Pro";
+	font-size: 16px;
+	padding: 12px;
+	padding-left: 75px; 	
+}
+
+.field2{
+	font-family: "Myriad Pro";
+	font-size: 16px;
+	padding: 12px;
+	padding-left: 75px;
+	resize: none;
+}
+
+.textbox0{
+	padding-left: 75px;
+	resize: vertical;
+    min-height: 120px;
+    max-height: 400px;
+}
+
+.actions{
+	padding: 20px;
+	padding-left: 280px;
+}
