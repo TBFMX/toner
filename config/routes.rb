@@ -23,6 +23,9 @@ Rails.application.routes.draw do
     get 'quienes/' => :quienes, :as => 'quienes'
     get 'distribuidores/' => :distribuidores, :as => 'distribuidores'    
     get 'contacto/' => :contacto, :as => 'contacto'
+    get 'cartuchos_compatibles/' => :cartuchos_compatibles, :as => 'cartuchos_compatibles'
+    get 'cartuchos_originales/' => :cartuchos_originales, :as => 'cartuchos_originales'
+    get 'impresoras_otros/' => :impresoras_otros, :as => 'impresoras_otros'
     post 'contacto/' => :contacto_send, :as => 'sender' #sender_path
   end  
 
