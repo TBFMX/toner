@@ -8,7 +8,7 @@ class Mailer < ActionMailer::Base
   #
   def Contact(array)
     @greeting = "Hi"
-
+    
     mail to: "jcmartinez@cwmex.com.mx"
   end
 

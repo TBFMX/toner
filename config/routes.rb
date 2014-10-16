@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   controller :store do
     get 'quienes/' => :quienes, :as => 'quienes'
+    get 'distribuidores/' => :distribuidores, :as => 'distribuidores'    
     get 'contacto/' => :contacto, :as => 'contacto'
     post 'contacto/' => :contacto_send, :as => 'sender' #sender_path
   end  

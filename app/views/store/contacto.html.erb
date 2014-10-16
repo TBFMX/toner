@@ -15,24 +15,33 @@
     </div>
   <%# end %>
   -->
-  <div class="field0">
-    <%= label_tag "name", "Nombre:" %><br>
-    <%= text_field_tag "name","" ,  required: true %>
+  <div class="datos_contacto">
+    <p><%= label_tag "name", "Nombre:" %><br>
+    <%= text_field_tag "name","" ,  required: true %></p>
+    <p><%= label_tag  "email", "E-mail:" %><br>
+    <%= text_field_tag "email","" , required: true, pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+([\.][a-zA-Z0-9-]{2,3}){1,2}$", title: "Ingrese un formato válido Micorreo@tupagina.com"  %></p>
+    <p><%= label_tag  "contactanos", "Teléfono:"  %><br>
+    <%= text_field_tag "contactanos","" , required: true %></p>
   </div>
-  <div class="field">
-    <%= label_tag  "email", "E-mail" %><br>
-    <%= text_field_tag "email","" , required: true, pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+([\.][a-zA-Z0-9-]{2,3}){1,2}$", title: "Ingrese un formato válido Micorreo@tupagina.com"  %>
-  </div>
-  <div class="field">
-    <%= label_tag  "contactanos", "Teléfono:"  %><br>
-    <%= text_field_tag "contactanos","" , required: true %>
-  </div>
-  <div class="field2">
-    <%= label_tag  "mensaje", "Mensaje:"  %></div>
-  <div class="textbox0">
+
+  <div class="datos_pedido">
+    <p><%= label_tag "brand", "Marca:" %><br>
+    <%= text_field_tag "brand","" ,  required: true %></p>
+    <p><%= label_tag  "model_printer", "Modelo de impresora:" %><br>
+    <%= text_field_tag "model_printer","" , required: true  %></p>
+    <p><%= label_tag  "model_cartridge", "Modelo de cartucho/Número de parte:"  %><br>
+    <%= text_field_tag "model_cartridge","" , required: true %></p>
+    <p><%= label_tag  "quantity", "Cantidad:"  %><br>
+    <%= text_field_tag "quantity","" , required: true %></p>
+  </div>  
+
+  <div class="datos_mensaje">
+    <%= label_tag  "mensaje", "Mensaje:"  %><br>
     <%= text_area_tag "mensaje","" , required: true  %>
   </div>  
+
   <div class="actions">
-    <%= submit_tag "Enviar" %>
+      <%= submit_tag "Enviar" %>
   </div>
+
 <% end %>
