@@ -44,7 +44,7 @@ class StoreController < ApplicationController
       end
 
       mail = Mail.deliver do
-        to 'sebastian@tbf.mx'#mail del webmaster
+        to 'información@tonerdpt.com.mx'#mail del webmaster
         from 'Arturito <arturito@tbf.mx>'
         subject 'Contacto pagina Toner'
         text_part do
