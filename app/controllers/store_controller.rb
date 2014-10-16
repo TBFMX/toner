@@ -17,6 +17,15 @@ class StoreController < ApplicationController
   def distribuidores
   end
 
+  def cartuchos_compatibles
+  end
+
+  def cartuchos_originales
+  end
+
+  def impresoras_otros
+  end    
+
   def contacto_send
     puts "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
     puts params.inspect
