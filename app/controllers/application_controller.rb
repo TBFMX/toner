@@ -7,11 +7,11 @@ class ApplicationController < ActionController::Base
 
 	require 'mail'
 		Mail.defaults do
-		  delivery_method :smtp, { :address   => "smtp.gmail.com",
+		  delivery_method :smtp, { :address   => "smtp.sendgrid.net",
 		                           :port      => 587,
 		                           :domain    => "tbf.mx",
-								   :user_name => "arturito@tbf.mx",
-								   :password => "vampirocanadiense",
+								   :user_name => "davidzu",
+								   :password => "Mictlan9",
 		                           :authentication => :login,
 		                           :enable_starttls_auto => true }
 		end

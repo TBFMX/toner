@@ -34,18 +34,18 @@ class StoreController < ApplicationController
     
     require 'mail'
       Mail.defaults do
-        delivery_method :smtp, { :address   => "smtp.gmail.com",
+        delivery_method :smtp, { :address   => "smtp.sendgrid.net",
                                  :port      => 587,
                                  :domain    => "tbf.mx",
-                                 :user_name => "arturito@tbf.mx",
-                                 :password => "vampirocanadiense",
+                                 :user_name => "davidzu",
+                                 :password => "Mictlan9",
                                  :authentication => :login,
                                  :enable_starttls_auto => true }
       end
 
       mail = Mail.deliver do
-        to 'información@tonerdpt.com.mx'#mail del webmaster
-        from 'Arturito <arturito@tbf.mx>'
+        to 'sebastian@tbf.mx' #'información@tonerdpt.com.mx'#mail del webmaster
+        from 'Servicios del Server <servidor@tonerdpt.com.mx>'
         subject 'Contacto pagina Toner'
         text_part do
           body 'Hello world in text'
