@@ -1,3 +1,5 @@
+#!/bin/env ruby
+# encoding: utf-8
 class StoreController < ApplicationController
   include CurrentCart
   before_action :set_cart
@@ -35,14 +37,14 @@ class StoreController < ApplicationController
         delivery_method :smtp, { :address   => "smtp.gmail.com",
                                  :port      => 587,
                                  :domain    => "tbf.mx",
-                     :user_name => "arturito@tbf.mx",
-                     :password => "vampirocanadiense",
+                                 :user_name => "arturito@tbf.mx",
+                                 :password => "vampirocanadiense",
                                  :authentication => :login,
                                  :enable_starttls_auto => true }
       end
 
       mail = Mail.deliver do
-        to ''#mail del webmaster
+        to 'sebastian@tbf.mx'#mail del webmaster
         from 'Arturito <arturito@tbf.mx>'
         subject 'Contacto pagina Toner'
         text_part do
@@ -50,7 +52,17 @@ class StoreController < ApplicationController
         end
         html_part do
           content_type 'text/html; charset=UTF-8'
-          body '<b>Hello world in HTML</b>'
+          body '<h1>Cotización:</h1>
+          <p>Se a contactado la persona:<br>
+              Nombre: ' + name + '<br>
+              Email: ' + email + '<br>
+              Teléfono: ' + contactanos + '<br>
+          </p>
+
+          <p>Para pedir informes sobre:<br>
+              La impresora: ' + model_printer + ' de la marca: ' + brand + ', para la cantidad ' + quantity + ' cartuchos modelo: ' + model_cartridge + '.<br>
+              Comentarios del comprador: ' + mensaje + '<br>
+          </p>'
         end
       end
 
