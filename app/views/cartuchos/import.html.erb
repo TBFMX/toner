@@ -1,0 +1,5 @@
+<%= form_tag upload_path , :multipart => true do %>
+<%= label_tag "archivo"%>
+<%= file_field_tag "archivo"%>
+ <%= submit_tag "Subir" %>
+<%end%>

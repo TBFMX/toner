@@ -65,6 +65,87 @@ class CartuchosController < ApplicationController
       format.json { head :no_content }
     end
   end
+  #funciones para subir archivos csv
+
+  def import
+    
+  end
+
+  def upload
+    require 'csv'
+      @csv_file_path = DataFile.save(params[:archivo])
+      puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+      puts @csv_file_path
+      puts "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+
+      unless @csv_file_path.blank?
+        puts "-----------------direccion actual-2--------------"
+        puts Dir.pwd
+        puts "------------------------------------------------"
+        directory = "public/data"
+        Dir.chdir(directory) do
+          if File.exist?(@csv_file_path.to_s)
+            puts "esta en local"
+            arr_of_rows = CSV.read(@csv_file_path.to_s)
+           
+            puts arr_of_rows.inspect
+
+          else
+            if File.exist?(@csv_file_path.to_s)
+              puts "esta en produccion"
+              arr_of_rows = CSV.read(@csv_file_path.to_s)
+              puts arr_of_rows.inspect
+            else
+              puts "------------------------------------------------"
+              puts "no entro a ninguno"
+              puts @csv_file_path.to_s
+              puts @csv_file_path.to_s
+              puts "------------------------------------------------"
+            end
+          end
+          
+          contador = 0
+          contador2 = 0
+          Cartucho.delete_all
+          arr_of_rows.each do |a|
+            aux_contenier = a
+            puts "------------------------"
+            puts aux_contenier
+            puts "------------------------"
+            if aux_contenier.size == 8 
+              @cartucho_comp = Cartucho.find_by(clave: aux_contenier[1])
+              #if @cartucho_comp.blank?
+                puts "entro otro >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><"
+                Cartucho.create(brand: aux_contenier[0],clave: aux_contenier[1],rendimiento: aux_contenier[2],price: aux_contenier[3],precio_original: aux_contenier[4],model: aux_contenier[5],impresoras: aux_contenier[6],description: aux_contenier[7])
+                contador2 +=1
+                 
+              # else
+              #   puts "------------------------"
+              #   puts @cartucho_comp.inspect 
+              #   puts "------------------------" 
+              # end
+              contador +=1
+              puts "------------------------"
+              puts "------------------------" 
+              puts "contador de size:" + contador.to_s
+              puts "------------------------" 
+              puts "------------------------" 
+              puts "------------------------"
+              puts "------------------------" 
+              puts "contador inserts:" + contador2.to_s
+              puts "------------------------" 
+              puts "------------------------" 
+            end
+
+          end
+        end
+      end
+      #redirect_to ingredients_path
+  end 
+  ####terminan csv
+
+
+
 
   
 

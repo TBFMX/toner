@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140919173140) do
+ActiveRecord::Schema.define(version: 20141028175706) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -29,17 +29,24 @@ ActiveRecord::Schema.define(version: 20140919173140) do
     t.string   "title"
     t.text     "description"
     t.string   "image_url"
-    t.decimal  "price",       precision: 9, scale: 2
+    t.decimal  "price",           precision: 9, scale: 2
     t.string   "brand"
     t.string   "model"
     t.string   "color"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.decimal  "price_40",    precision: 8, scale: 2
-    t.decimal  "price_21",    precision: 8, scale: 2
-    t.decimal  "price_10",    precision: 8, scale: 2
+    t.decimal  "price_40",        precision: 8, scale: 2
+    t.decimal  "price_21",        precision: 8, scale: 2
+    t.decimal  "price_10",        precision: 8, scale: 2
     t.string   "clave"
     t.integer  "rendimiento"
+    t.string   "impresoras"
+    t.string   "precio_original"
+  end
+
+  create_table "data_files", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "line_items", force: true do |t|

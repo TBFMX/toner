@@ -16,6 +16,9 @@ Rails.application.routes.draw do
     get 'cartuchos/' => :index
     get 'cartuchos/lista' =>:list , :as => 'list'
     post 'cartuchos/search' => :search, :as => 'search'
+    post 'upload' => :upload , :as => 'upload'
+    post 'cartuchos/upload' => :upload 
+    get 'subir' => :import, :as => 'import'
   end
 
 
@@ -28,6 +31,8 @@ Rails.application.routes.draw do
     get 'impresoras_otros/' => :impresoras_otros, :as => 'impresoras_otros'
     post 'contacto/' => :contacto_send, :as => 'sender' #sender_path
   end  
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
