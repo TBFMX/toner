@@ -140,7 +140,7 @@ class CartuchosController < ApplicationController
           end
         end
       end
-      #redirect_to ingredients_path
+      redirect_to cartuchos_path
   end 
   ####terminan csv
 

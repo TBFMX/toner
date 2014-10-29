@@ -34,7 +34,7 @@ class DataFile < ActiveRecord::Base
 		    #dir ="/app/assets/data/" + carpeta.to_s
 		    @path2 = File.join(dir, name)
 		    # write the file
-		    File.open(path, "wb") { |f| f.write(upload.read) }
+		    File.open(path, "wb",0775) { |f| f.write(upload.read) }
 
 	    end
 
