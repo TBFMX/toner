@@ -126,6 +126,15 @@ input.sp-selector-3:checked ~ .sp-content {
 
 }
 
+input.sp-selector-4:checked ~ .sp-content {
+    background-position: -300px 0;
+
+}
+
+input.sp-selector-5:checked ~ .sp-content {
+    background-position: -400px 0;
+
+}
 
 input.sp-selector-1:checked ~ .sp-content .sp-parallax-bg {
     background-position: 0 0;
@@ -138,7 +147,14 @@ input.sp-selector-2:checked ~ .sp-content .sp-parallax-bg {
 input.sp-selector-3:checked ~ .sp-content .sp-parallax-bg {
     background-position: -400px 0;
 }
+
+input.sp-selector-4:checked ~ .sp-content .sp-parallax-bg {
+    background-position: -600px 0;
+}
  
+input.sp-selector-5:checked ~ .sp-content .sp-parallax-bg {
+    background-position: -800px 0;
+}
 
 
 .sp-slider {
@@ -179,11 +195,21 @@ input.sp-selector-2:checked ~ .sp-content .sp-slider {
 input.sp-selector-3:checked ~ .sp-content .sp-slider {
     left: -200%;
 }
+
+input.sp-selector-4:checked ~ .sp-content .sp-slider {
+    left: -300%;
+}
+ 
+input.sp-selector-5:checked ~ .sp-content .sp-slider {
+    left: -400%;
+}
  
 
 input.sp-selector-1:checked ~ .sp-content .sp-slider > li:first-child,
 input.sp-selector-2:checked ~ .sp-content .sp-slider > li:nth-child(2),
 input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3),
+input.sp-selector-4:checked ~ .sp-content .sp-slider > li:nth-child(4),
+input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5),
 {
     opacity: 1;
 }
