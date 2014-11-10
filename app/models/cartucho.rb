@@ -3,15 +3,71 @@ class Cartucho < ActiveRecord::Base
 	before_destroy :ensure_not_referenced_by_any_line_item
 
 
-	def self.search(search)
-	  if search
-	  	aux = '%' + search + '%'
-	  	#aux = search 
-	    where('name LIKE ? or description LIKE ? or etiquetas LIKE ?', aux,aux,aux)
-	    #.order('package DESC,rank ASC, priority ASC')
-	  else
-	    all
-	  end
+	def self.search(modelo,marca)
+		listo = false
+
+		aux = '%' + modelo + '%'
+		aux2 = '%' + marca + '%'
+		unless modelo.blank? || marca.blank?
+			
+			#aux = search 
+			puts "entron ambos"
+			listo = true
+			return where('model LIKE ? or brand LIKE ? ', aux,aux2)
+			#.order('package DESC,rank ASC, priority ASC')
+			
+		else
+			unless modelo.blank?
+				listo = true
+				puts "entro modelo"
+				return where('model LIKE ? ', aux)
+				
+		    end
+		    unless marca.blank?
+		    	listo = true
+				puts "entro marca"
+				puts aux2
+		    	return where('brand LIKE ? ', aux2)
+				
+		    end
+		end
+		if listo == false
+			all
+		end
+
+	end
+	def self.search_imp(modelo,marca)
+		listo = false
+
+		aux = '%' + modelo + '%'
+		aux2 = '%' + marca + '%'
+		unless modelo.blank? || marca.blank?
+			
+			#aux = search 
+			puts "entron ambos"
+			listo = true
+			return where('model LIKE ? or brand LIKE ? ', aux,aux2)
+			#.order('package DESC,rank ASC, priority ASC')
+			
+		else
+			unless modelo.blank?
+				listo = true
+				puts "entro modelo"
+				return where('impresoras LIKE ? ', aux)
+				
+		    end
+		    unless marca.blank?
+		    	listo = true
+				puts "entro marca"
+				puts aux2
+		    	return where('brand LIKE ? ', aux2)
+				
+		    end
+		end
+		if listo == false
+			all
+		end
+
 	end
 
 	private

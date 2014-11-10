@@ -22,6 +22,23 @@ class CartuchosController < ApplicationController
   def edit
   end
 
+  def searcher
+    @cartuchos = Cartucho.search(params[:model],params[:brand]).order("clave ASC").paginate(:page => params[:page], :per_page => 20)
+    #aux2 = '%' + params[:brand] + '%'
+    #@cartuchos = Cartucho.where('brand LIKE ? ', aux2).order("clave ASC").paginate(:page => params[:page], :per_page => 20)
+    puts "-------------------------------"
+    puts @cartuchos
+    puts "-------------------------------"
+  end
+  def search_imp
+    @cartuchos = Cartucho.search_imp(params[:model],params[:brand]).order("clave ASC").paginate(:page => params[:page], :per_page => 20)
+    #aux2 = '%' + params[:brand] + '%'
+    #@cartuchos = Cartucho.where('brand LIKE ? ', aux2).order("clave ASC").paginate(:page => params[:page], :per_page => 20)
+    puts "-------------------------------"
+    puts @cartuchos
+    puts "-------------------------------"
+  end  
+
   def list
     @cartuchos = Cartucho.all
   end  
