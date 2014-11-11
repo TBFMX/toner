@@ -4,8 +4,16 @@ class CartuchosController < ApplicationController
   # GET /cartuchos
   # GET /cartuchos.json
   def index
-    @cartuchos = Cartucho.all
-    @cartuchos = Cartucho.order("clave ASC").paginate(:page => params[:page], :per_page => 20) 
+    @marcas = Cartucho.select('brand').distinct()
+    @impresoras = Cartucho.select('impresoras').group('brand')
+
+    if params[:brand]
+      @cartuchos = Cartucho.query(params).order("clave ASC").paginate(:page => params[:page], :per_page => 20)
+      #@cartuchos = Cartucho.order("clave ASC").paginate(:page => params[:page], :per_page => 20)
+    else
+      @cartuchos = Cartucho.all
+      @cartuchos = Cartucho.order("clave ASC").paginate(:page => params[:page], :per_page => 20)
+    end  
   end
 
   # GET /cartuchos/1

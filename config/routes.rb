@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     post 'cartuchos' =>:create
     post 'cartuchos/:id' => :update
     get 'cartuchos/' => :index
+    get 'cartucho' => :index
+    post 'cartucho' => :index , :as => 'seleccion'
     get 'cartuchos/lista' =>:list , :as => 'list'
     post '/search' => :searcher, :as => 'search'
     post '/BuscarXImpresora' => :search_imp, :as => 'search2'

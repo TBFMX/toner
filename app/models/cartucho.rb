@@ -2,6 +2,32 @@ class Cartucho < ActiveRecord::Base
 	has_many :line_items
 	before_destroy :ensure_not_referenced_by_any_line_item
 
+	#nota: pude haber usado push pero es para que fuera mas facil de entender y fuera simetrico
+	def self.query(cartucho)
+	    @aux= " 1 = 1 "
+	    @aux2= Array.new
+	    @cont=1
+	    if cartucho
+		    if !cartucho[:brand].blank?
+		    	@aux= @aux + 'and brand = ? '
+		    	@aux2[@cont]=  cartucho[:brand]
+		    	@cont=@cont+1
+		    end
+		    if !cartucho[:impresoras].blank?
+		    	@aux= @aux + 'and impresoras = ? '
+		    	@aux2[@cont]=  cartucho[:impresoras]
+		    	@cont=@cont+1
+		    end
+		end
+	    if @aux
+	    #puts @cont	
+		      @aux2[0]=@aux
+	      where @aux2 
+	    else
+	      scoped
+	    end
+
+	end	
 
 	def self.search(modelo,marca)
 		listo = false
