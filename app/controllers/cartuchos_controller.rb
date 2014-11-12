@@ -4,8 +4,10 @@ class CartuchosController < ApplicationController
   # GET /cartuchos
   # GET /cartuchos.json
   def index
-    @marcas = Cartucho.select('brand').distinct()
-    @impresoras = Cartucho.select('impresoras').group('brand')
+    @marcas = Cartucho.select('brand').distinct().where("brand <> '#N/A'")
+    @impresoras = Printers.select('model','brand_model').where("model <> '#N/A'")
+
+
 
     if params[:brand]
       @cartuchos = Cartucho.query(params).order("clave ASC").paginate(:page => params[:page], :per_page => 20)
@@ -98,6 +100,7 @@ class CartuchosController < ApplicationController
 
   def upload
     require 'csv'
+    unless params[:archivo].blank?
       @csv_file_path = DataFile.save(params[:archivo])
       puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
       puts @csv_file_path
@@ -161,11 +164,25 @@ class CartuchosController < ApplicationController
               puts "------------------------" 
               puts "------------------------" 
             end
-
           end
         end
+        @marcas = Cartucho.select('brand').distinct()
+        @impresoras = Cartucho.select('impresoras','brand')
+
+        Brand.delete_all
+        @marcas.each do |m|
+          Brand.create(name: m.brand)
+        end
+
+        Printers.delete_all
+        @impresoras.each do |i|
+          b_m = i.brand.to_s + "-" + i.impresoras.to_s
+          Printers.create(brand: i.brand, model: i.impresoras,brand_model: b_m )
+        end 
       end
-      redirect_to store_path
+      
+    end
+    redirect_to store_path
   end 
   ####terminan csv
 

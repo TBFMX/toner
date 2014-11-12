@@ -1,6 +1,7 @@
 <%=form_tag seleccion_path do %>
-  <%=select_tag "brand", options_from_collection_for_select(@marcas, "brand", "brand")%>
-  <%#=select_tag "impresoras", options_from_collection_for_select(@impresoras, "impresoras", "impresoras")%>
+  <%=select_tag "brand", options_from_collection_for_select(@marcas, "brand", "brand"), {include_blank: false}%>
+  <%#=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand" + "-" + " impresoras", "impresoras")%>
+  <%=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand_model", "model"), {include_blank: false}%>
   <%=submit_tag 'filtrar'%>
 <% end %>
 
