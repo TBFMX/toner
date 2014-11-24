@@ -10,8 +10,8 @@
     <p class="tituloverdetext"> Buscar cartucho </p>
     <%= form_tag search_path do %>
         <%= text_field_tag 'model_c' %>
-        <%= select_tag('brand', options_from_collection_for_select(@brand, 'name', 'name'))%>
-        <%= select_tag('model_i', options_from_collection_for_select(@printer, 'model', 'model'))%>
+        <%= select_tag('brand', options_from_collection_for_select(@brand, 'name', 'name'), :prompt => "Please select")%>
+        <%= select_tag('model_i', options_from_collection_for_select(@printer, 'model', 'model'), :prompt => "Please select")%>
         <%#= text_field_tag 'model_i' %>
         <%= submit_tag "buscar" %>
     <% end %> 
