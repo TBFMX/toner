@@ -29,37 +29,45 @@ class Cartucho < ActiveRecord::Base
 
 	end	
 
-	def self.search(modelo,marca)
+	def self.search(modelo_c,marca,modelo_i)
+		
 		listo = false
 
-		aux = '%' + modelo + '%'
-		aux2 = '%' + marca + '%'
-		unless modelo.blank? || marca.blank?
-			
-			#aux = search 
-			puts "entron ambos"
-			listo = true
-			return where('model LIKE ? or brand LIKE ? ', aux,aux2)
-			#.order('package DESC,rank ASC, priority ASC')
-			
-		else
-			unless modelo.blank?
-				listo = true
-				puts "entro modelo"
-				return where('model LIKE ? ', aux)
-				
+		
+		
+		
+	@aux= " 1 = 1 "
+	    @aux2= Array.new
+	    @cont=1
+	    
+		    if !modelo_c.blank?
+		    	modelo_sc = '%' + modelo_c + '%'
+		    	@aux= @aux + 'and model LIKE ? '
+		    	@aux2[@cont]=  modelo_sc
+		    	@cont=@cont+1
 		    end
-		    unless marca.blank?
-		    	listo = true
-				puts "entro marca"
-				puts aux2
-		    	return where('brand LIKE ? ', aux2)
-				
+		    if !marca.blank?
+		    	@aux= @aux + 'and brand = ? '
+		    	@aux2[@cont]=  marca
+		    	@cont=@cont+1
 		    end
-		end
-		if listo == false
-			all
-		end
+		    if !modelo_i.blank?
+		    	modelo_si = '%' + modelo_i + '%'
+		    	@aux= @aux + 'and impresoras LIKE ? '
+		    	@aux2[@cont]= modelo_si
+		    	@cont=@cont+1
+		    end
+
+		    
+
+		    
+	    if @aux
+	    #puts @cont	
+		      @aux2[0]=@aux
+	      where @aux2 
+	    else
+	      scoped
+	    end
 
 	end
 	def self.search_imp(modelo,marca)

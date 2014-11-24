@@ -1,3 +1,6 @@
+<!-- se puso en la vista para no restructurar todo-->
+<%@brand = Brand.all.distinct%>
+<%@printer = Printers.all.distinct%>
 <div class="side">
 	<span class="logo"><%= link_to image_tag("/Imagenes/Inicio/logo.jpg"), store_path, class: "menu1" %></span>
     <p class="titulorosa">Información</br><span class="tituloazul">DF: 5572 3254</br>Qro: 4430 1039</span></p>
@@ -6,17 +9,20 @@
     <span class="titulorosa3"> sin costo</span><span class="tituloazul3"> en Queretaro, </br>DF y area metropolitana </span></p>
     <p class="tituloverdetext"> Buscar cartucho </p>
     <%= form_tag search_path do %>
-        <%= text_field_tag 'brand' %>
-        <%= text_field_tag 'model' %>
-        <%= submit_tag "buscar" %>
-    <% end %>  
-    <p class="titulorosatext"> Buscar impresoras </p>
-        <%= form_tag search2_path do %>
-        <%= text_field_tag 'brand' %>
-        <%= text_field_tag 'model' %> 
+        <%= text_field_tag 'model_c' %>
+        <%= select_tag('brand', options_from_collection_for_select(@brand, 'name', 'name'))%>
+        <%= select_tag('model_i', options_from_collection_for_select(@printer, 'model', 'model'))%>
+        <%#= text_field_tag 'model_i' %>
         <%= submit_tag "buscar" %>
     <% end %> 
-
+    <!--
+    <p class="titulorosatext"> Buscar impresoras </p>
+    <%#= form_tag search2_path do %>
+        <%#= text_field_tag 'brand' %>
+        <%#= text_field_tag 'model' %> 
+        <%#= submit_tag "buscar" %>
+    <%# end %> 
+    -->
 	<span class ="imagen2"><img src="/Imagenes/Inicio/imagen2.jpg"></span>
     <span class ="imagen3"><img src="/Imagenes/Inicio/imagen3.jpg"></span>
 </div>	

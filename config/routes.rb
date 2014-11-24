@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     post 'cartucho' => :index , :as => 'seleccion'
     get 'cartuchos/lista' =>:list , :as => 'list'
     post '/search' => :searcher, :as => 'search'
+    get '/search' => :searcher
     post '/BuscarXImpresora' => :search_imp, :as => 'search2'
     post 'upload' => :upload , :as => 'upload'
     post 'cartuchos/upload' => :upload 
