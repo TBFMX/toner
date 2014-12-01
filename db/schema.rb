@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20141111210610) do
     t.string   "title"
     t.text     "description"
     t.string   "image_url"
-    t.decimal  "price",           precision: 9, scale: 2
+    t.decimal  "price",           precision: 8, scale: 2
     t.string   "brand"
     t.string   "model"
     t.string   "color"
