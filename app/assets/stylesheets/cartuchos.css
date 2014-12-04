@@ -46,6 +46,16 @@
 	float: right;
 	margin: 10px 10px;
 }
+
+/*------------------Filtros --------------------*/
+
+.filtrar_cartuchos{
+	width: 500px;
+	text-align: right;
+	float: right;
+
+}
+
 /*------------------buscador de la izquierda --------------------*/
 
 .buscador_productos form select{

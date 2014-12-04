@@ -1,11 +1,14 @@
-<%=form_tag seleccion_path do %>
-  <%=select_tag "brand", options_from_collection_for_select(@marcas, "brand", "brand"), {include_blank: false}%>
-  <%#=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand" + "-" + " impresoras", "impresoras")%>
-  <%=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand_model", "model"), {include_blank: false}%>
-  <%=submit_tag 'filtrar'%>
-<% end %>
-
 <div class="cintilla_cartuchos">Cartuchos</div>
+
+<div class="filtrar_cartuchos">
+  <%=form_tag seleccion_path do %>
+    <%=select_tag "brand", options_from_collection_for_select(@marcas, "brand", "brand"), {include_blank: false}%>
+    <%#=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand" + "-" + " impresoras", "impresoras")%>
+    <%=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand_model", "model"), {include_blank: false}%>
+    <%=submit_tag 'filtrar'%>
+  <% end %>
+</div>
+
 <table class="tabla_lista_articulos">
   <tr>
     <th>Marca</th>
@@ -23,7 +26,7 @@
       <%= form_tag(line_items_path, remote: true) do %>
         <td><%= text_field_tag 'quantity'%></td>
         <td><%= text_field_tag 'total' %></td> <!-- el id es 'total' -->  
-        <td><%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar a Pedido'%></td>
+        <td><%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar'%></td>
       <%end%>
     </tr>
   <% end %>
