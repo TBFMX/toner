@@ -1,14 +1,13 @@
 .der_contenido .contenido .somos {
 	padding-top: 10%;
 	padding-left: 10%;
-	padding-right: 35%;
-	font-family: "Calibri";
+	padding-right: 10%;
+	text-align: justify;
+	font-family: "Myriad Pro","Gill Sans","Gill Sans MT",Calibri,sans-serif;
 	font-size: 14px;
-	text-align: left;
 }
 
 .der_contenido .contenido .impresora {
-	padding-top: 100px;
-	padding-right: 8px;
+	padding: 80px 10% 10% 10%;
 	float: right;
 } 
