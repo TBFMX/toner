@@ -82,7 +82,7 @@ body {
 .izq_contenido .titulorosatext,{
    width:160px;    
    margin-top: 10px;    
-   margin-left: 10px;  
+   /*margin-left: 10px; */
 }
 
 .izq_contenido .titulorosa{
