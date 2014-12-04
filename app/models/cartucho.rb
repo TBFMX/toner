@@ -42,9 +42,10 @@ class Cartucho < ActiveRecord::Base
 	    
 		    if !modelo_c.blank?
 		    	modelo_sc = '%' + modelo_c + '%'
-		    	@aux= @aux + 'and model LIKE ? '
+		    	@aux= @aux + 'and clave LIKE ? '
 		    	@aux2[@cont]=  modelo_sc
 		    	@cont=@cont+1
+		    	
 		    end
 		    if !marca.blank?
 		    	@aux= @aux + 'and brand = ? '
@@ -64,6 +65,7 @@ class Cartucho < ActiveRecord::Base
 	    if @aux
 	    #puts @cont	
 		      @aux2[0]=@aux
+		      
 	      where @aux2 
 	    else
 	      scoped
