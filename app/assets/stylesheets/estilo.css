@@ -6,6 +6,9 @@ body {
   background-attachment: fixed;
 }
 
+form select{
+  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+}
 /*----------------------Div principal ------------------*/
 
 .principal{

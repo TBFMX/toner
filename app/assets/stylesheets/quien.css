@@ -1,5 +1,5 @@
 .der_contenido .contenido .somos {
-	padding-top: 10%;
+	padding-top: 5%;
 	padding-left: 10%;
 	padding-right: 10%;
 	text-align: justify;
@@ -7,7 +7,8 @@
 	font-size: 14px;
 }
 
-.der_contenido .contenido .impresora {
-	padding: 80px 10% 10% 10%;
+.der_contenido .contenido .impresora ,
+.der_contenido .contenido .distribuidores {
+	padding: 80px 0px 10% 10%;
 	float: right;
 } 
