@@ -4,6 +4,7 @@
   <%=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand_model", "model"), {include_blank: false}%>
   <%=submit_tag 'filtrar'%>
 <% end %>
+<p><%= button_to('Finalizar',cart_path(@cart),method: :get)%></p>
 
 <div class="cintilla_cartuchos">Cartuchos</div>
 <table class="tabla_lista_articulos">
@@ -21,10 +22,10 @@
       <td><%=cartucho.clave%></td>
       <td><%= number_to_currency(cartucho.price) %></td>
       <%= form_tag(line_items_path, remote: true) do %>
-        <td><%= text_field_tag 'quantity'%></td>
-        <td><%= text_field_tag 'total' %></td> <!-- el id es 'total' -->  
-        <td><%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar a Pedido'%></td>
-      <%end%>
+        <td colspan = '3'><%= text_field_tag 'quantity'%>
+        <%= text_field_tag 'total' %> <!-- el id es 'total' -->  
+        <%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar a Pedido'%></td>
+      <% end %>
     </tr>
   <% end %>
 </table>
