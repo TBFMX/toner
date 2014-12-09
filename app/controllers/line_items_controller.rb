@@ -27,6 +27,9 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
     cartucho = Cartucho.find(params[:cartucho_id])
+    if params[:quantity].nil? || params[:quantity].blank?
+      params[:quantity] = 0
+    end
     @line_item = @cart.add_cartucho(cartucho.id, params[:quantity])
 
     respond_to do |format|
