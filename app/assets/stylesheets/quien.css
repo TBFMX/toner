@@ -4,11 +4,33 @@
 	padding-right: 10%;
 	text-align: justify;
 	font-family: "Myriad Pro","Gill Sans","Gill Sans MT",Calibri,sans-serif;
-	font-size: 14px;
+	font-size: 16px;
+	line-height: 120%;
 }
 
 .der_contenido .contenido .impresora ,
 .der_contenido .contenido .distribuidores {
-	padding: 80px 0px 10% 10%;
+	padding: 10px 0px 10% 10%;
 	float: right;
 } 
+
+
+.somos .logos{
+	width: 100%;
+	list-style: none;
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.somos .logos li{
+	width: 30%;
+	height: 20%;
+	float: left;
+	margin: 1.5%
+}
+
+.somos .logos li img{
+	max-width: 200px;
+}
+
