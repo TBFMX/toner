@@ -35,6 +35,8 @@ Rails.application.routes.draw do
     get 'cartuchos_originales/' => :cartuchos_originales, :as => 'cartuchos_originales'
     get 'impresoras_otros/' => :impresoras_otros, :as => 'impresoras_otros'
     post 'contacto/' => :contacto_send, :as => 'sender' #sender_path
+    get 'presupuesto/' => :presupuesto, :as => 'presupuesto'
+    post 'presupuesto/' => :presupuesto_send, :as => 'presupuesto_sender' #sender_path
   end  
 
 

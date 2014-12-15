@@ -4,8 +4,8 @@ class CartuchosController < ApplicationController
   # GET /cartuchos
   # GET /cartuchos.json
   def index
-    @marcas = Cartucho.select('brand').distinct().where("brand <> '#N/A'")
-    @impresoras = Printers.select('model','brand_model').where("model <> '#N/A'")
+    @marcas = Cartucho.select('brand').distinct().where("brand <> '#N/A'and brand <> 'MARCA'")
+    @impresoras = Printers.select('model','brand_model').where("model <> '#N/A' and model <> 'Impresora'")
 
 
 
