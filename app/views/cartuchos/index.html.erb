@@ -2,9 +2,11 @@
 
 <div class="filtrar_cartuchos">
   <%=form_tag seleccion_path do %>
+    <%= label_tag "brand", 'Marca'%>
     <%=select_tag "brand", options_from_collection_for_select(@marcas, "brand", "brand"), {include_blank: true}%>
     <%#=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand" + "-" + " impresoras", "impresoras")%>
-    <%=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand_model", "model"), {include_blank: true}%>
+    <%= label_tag "impresoras", 'impresoras'%>
+    <%=select_tag "impresoras", options_from_collection_for_select(@impresoras, "model", "brand_model"), {include_blank: true}%>
     <%=submit_tag 'filtrar'%>
   <% end %>
   <p><%= button_to('Finalizar',cart_path(@cart),method: :get)%></p>
