@@ -180,7 +180,7 @@ class CartuchosController < ApplicationController
 
           b_m = i.brand.to_s + "-" + i.impresoras.to_s
           b_id = Brand.find_by(name: i.brand.to_s)
-          Printers.create(brand_id: b_id, brand_name: i.brand.to_s, model: i.impresoras.to_s,brand_model: b_m )
+          Printers.create( brand_name: i.brand.to_s, model: i.impresoras.to_s,brand_model: b_m )
         end 
       end
       
