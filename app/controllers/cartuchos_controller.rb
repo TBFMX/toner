@@ -143,11 +143,11 @@ class CartuchosController < ApplicationController
             puts "------------------------"
             if aux_contenier.size == 8 
               @cartucho_comp = Cartucho.find_by(clave: aux_contenier[1])
-              #if @cartucho_comp.blank?
+              unless aux_contenier[0].blank?
                 puts "entro otro >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><"
                 Cartucho.create(brand: aux_contenier[0],clave: aux_contenier[1],rendimiento: aux_contenier[2],price: aux_contenier[3],precio_original: aux_contenier[4],model: aux_contenier[5],impresoras: aux_contenier[6],description: aux_contenier[7])
                 contador2 +=1
-                 
+              end   
               # else
               #   puts "------------------------"
               #   puts @cartucho_comp.inspect 
@@ -177,8 +177,10 @@ class CartuchosController < ApplicationController
 
         Printers.delete_all
         @impresoras.each do |i|
+
           b_m = i.brand.to_s + "-" + i.impresoras.to_s
-          Printers.create(brand: i.brand, model: i.impresoras,brand_model: b_m )
+          b_id = Brand.find_by(name: i.brand.to_s)
+          Printers.create(brand_id: b_id, brand_name: i.brand.to_s, model: i.impresoras.to_s,brand_model: b_m )
         end 
       end
       

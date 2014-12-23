@@ -7,6 +7,7 @@
     <%#=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand" + "-" + " impresoras", "impresoras")%>
     <%= label_tag "impresoras", 'impresoras'%>
     <%=select_tag "impresoras", options_from_collection_for_select(@impresoras, "model", "brand_model"), {include_blank: true}%>
+    <%#= grouped_collection_select "impresoras", Brand.order(:name), "impresoras", :name, :id, :name, include_blank: true , required: true%> 
     <%=submit_tag 'filtrar'%>
   <% end %>
   <p><%= button_to('Finalizar',cart_path(@cart),method: :get)%></p>
@@ -25,7 +26,7 @@
     <tr>
       <td><%=cartucho.brand%></td>
       <td><%=cartucho.clave%></td>
-      <td><%= number_to_currency(cartucho.price) %></td>
+      <td><%= cartucho.price %></td>
       <%= form_tag(line_items_path, remote: true) do %>
         <td colspan = '3'><%= text_field_tag 'quantity'%>
         <%= text_field_tag 'total' %> <!-- el id es 'total' -->  

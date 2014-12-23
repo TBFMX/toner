@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028172917) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20141216183459) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -32,17 +29,19 @@ ActiveRecord::Schema.define(version: 20141028172917) do
     t.string   "title"
     t.text     "description"
     t.string   "image_url"
-    t.decimal  "price",       precision: 8, scale: 2
+    t.string   "price",           limit: 9
     t.string   "brand"
     t.string   "model"
     t.string   "color"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.decimal  "price_40",    precision: 8, scale: 2
-    t.decimal  "price_21",    precision: 8, scale: 2
-    t.decimal  "price_10",    precision: 8, scale: 2
+    t.decimal  "price_40",                  precision: 8, scale: 2
+    t.decimal  "price_21",                  precision: 8, scale: 2
+    t.decimal  "price_10",                  precision: 8, scale: 2
     t.string   "clave"
     t.integer  "rendimiento"
+    t.string   "impresoras"
+    t.string   "precio_original"
   end
 
   create_table "data_files", force: true do |t|
@@ -58,7 +57,16 @@ ActiveRecord::Schema.define(version: 20141028172917) do
     t.integer  "quantity",    default: 1
   end
 
-  add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id", using: :btree
-  add_index "line_items", ["cartucho_id"], name: "index_line_items_on_cartucho_id", using: :btree
+  add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id"
+  add_index "line_items", ["cartucho_id"], name: "index_line_items_on_cartucho_id"
+
+  create_table "printers", force: true do |t|
+    t.string   "brand_name"
+    t.string   "model"
+    t.string   "brand_model"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "brand_id"
+  end
 
 end
