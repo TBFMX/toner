@@ -7,7 +7,7 @@
     <%#=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand" + "-" + " impresoras", "impresoras")%>
     <%= label_tag "impresoras", 'impresoras'%>
     
-    <%= grouped_collection_select( @impresoras, :brand_id , Brand.order(:name), :printers, :name, :model, :model, {include_blank: true}) %>
+    <%= grouped_collection_select( @impresoras, :brand_model , Brand.order(:name), :printers, :name, :model, :model, {include_blank: true}) %>
 
     <%#=select_tag "impresoras", options_for_select(@options, :disabled => @marcas) , {include_blank: true}%>
 
