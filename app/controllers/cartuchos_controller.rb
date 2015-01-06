@@ -5,9 +5,16 @@ class CartuchosController < ApplicationController
   # GET /cartuchos.json
   def index
     @marcas = Cartucho.select('brand').distinct().where("brand <> '#N/A'and brand <> 'MARCA'")
-    @impresoras = Printers.select('model','brand_model').where("model <> '#N/A' and model <> 'Impresora'")
+    @impresoras = Printer.where("model <> '#N/A' and model <> 'Impresora'")
+    @impresoras_grp = Printer.where("model <> '#N/A' and model <> 'Impresora'").group('brand_name')
 
-
+    puts "----------------------------"
+    #puts @impresoras.inspect
+    puts "----------------------------"
+    @options = Array.new
+    @impresoras.each do |l|
+      @options.push([l.model, l.model])
+    end
 
     if params[:brand]
       @cartuchos = Cartucho.query(params).order("clave ASC").paginate(:page => params[:page], :per_page => 20)
@@ -175,12 +182,12 @@ class CartuchosController < ApplicationController
           Brand.create(name: m.brand)
         end
 
-        Printers.delete_all
+        Printer.delete_all
         @impresoras.each do |i|
 
           b_m = i.brand.to_s + "-" + i.impresoras.to_s
           b_id = Brand.find_by(name: i.brand.to_s)
-          Printers.create( brand_name: i.brand.to_s, model: i.impresoras.to_s,brand_model: b_m )
+          Printer.create( brand_name: i.brand.to_s, model: i.impresoras.to_s,brand_model: b_m, brand_id: b_id )
         end 
       end
       

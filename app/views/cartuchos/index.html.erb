@@ -6,8 +6,11 @@
     <%=select_tag "brand", options_from_collection_for_select(@marcas, "brand", "brand"), {include_blank: true}%>
     <%#=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand" + "-" + " impresoras", "impresoras")%>
     <%= label_tag "impresoras", 'impresoras'%>
-    <%=select_tag "impresoras", options_from_collection_for_select(@impresoras, "model", "brand_model"), {include_blank: true}%>
-    <%#= grouped_collection_select "impresoras", Brand.order(:name), "impresoras", :name, :id, :name, include_blank: true , required: true%> 
+    
+    <%= grouped_collection_select( @impresoras, :brand_id , Brand.order(:name), :printers, :name, :model, :model, {include_blank: true}) %>
+
+    <%#=select_tag "impresoras", options_for_select(@options, :disabled => @marcas) , {include_blank: true}%>
+
     <%=submit_tag 'filtrar'%>
   <% end %>
   <p><%= button_to('Finalizar',cart_path(@cart),method: :get)%></p>
@@ -29,7 +32,7 @@
       <td><%= cartucho.price %></td>
       <%= form_tag(line_items_path, remote: true) do %>
         <td colspan = '3'><%= text_field_tag 'quantity'%>
-        <%= text_field_tag 'total' %> <!-- el id es 'total' -->  
+        <%#= text_field_tag 'total' %> <!-- el id es 'total' -->  
         <%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar a Pedido'%></td>
       <% end %>
 

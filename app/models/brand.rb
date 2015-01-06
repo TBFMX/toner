@@ -1,3 +1,3 @@
 class Brand < ActiveRecord::Base
-	has_many :printers
+	has_many :printers 
 end
