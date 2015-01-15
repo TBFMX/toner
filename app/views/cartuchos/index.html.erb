@@ -5,9 +5,9 @@
     <%= label_tag "brand", 'Marca'%>
     <%=select_tag "brand", options_from_collection_for_select(@marcas, "brand", "brand"), {include_blank: true}%>
     <%#=select_tag "impresoras", options_from_collection_for_select(@impresoras, "brand" + "-" + " impresoras", "impresoras")%>
-    <%= label_tag "impresoras", 'impresoras'%>
+    <%#= label_tag "impresoras", 'impresoras'%>
     
-    <%= grouped_collection_select( @impresoras, :brand_model , Brand.order(:name), :printers, :name, :model, :model, {include_blank: true}) %>
+    <%#= grouped_collection_select( @impresoras, :brand_model , Brand.order(:name), :printers, :name, :model, :model, {include_blank: true}) %>
 
     <%#=select_tag "impresoras", options_for_select(@options, :disabled => @marcas) , {include_blank: true}%>
 
@@ -22,7 +22,7 @@
     <th>Modelo</th>
     <th>Precio</th>
     <th>Cantidad</th>
-    <th>Total</th>
+    
     <th></th>
   </tr>
   <% @cartuchos.each do |cartucho| %>
@@ -30,12 +30,13 @@
       <td><%=cartucho.brand%></td>
       <td><%=cartucho.clave%></td>
       <td><%= cartucho.price %></td>
+      <td colspan = '2'>
       <%= form_tag(line_items_path, remote: true) do %>
-        <td colspan = '3'><%= text_field_tag 'quantity'%>
+        <%= text_field_tag 'quantity'%>
         <%#= text_field_tag 'total' %> <!-- el id es 'total' -->  
-        <%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar a Pedido'%></td>
+        <%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar'%>
       <% end %>
-
+      </td>
     </tr>
   <% end %>
 </table>

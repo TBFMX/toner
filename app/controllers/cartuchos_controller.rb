@@ -17,11 +17,11 @@ class CartuchosController < ApplicationController
     end
 
     if params[:brand]
-      @cartuchos = Cartucho.query(params).order("clave ASC").paginate(:page => params[:page], :per_page => 20)
+      @cartuchos = Cartucho.query(params).order("clave ASC").paginate(:page => params[:page], :per_page => 10)
       #@cartuchos = Cartucho.order("clave ASC").paginate(:page => params[:page], :per_page => 20)
     else
       @cartuchos = Cartucho.all
-      @cartuchos = Cartucho.order("clave ASC").paginate(:page => params[:page], :per_page => 20)
+      @cartuchos = Cartucho.order("clave ASC").paginate(:page => params[:page], :per_page => 10)
     end  
   end
 
