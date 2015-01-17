@@ -92,21 +92,21 @@ class StoreController < ApplicationController
     name = params[:name]
     email = params[:email]
     contactanos = params[:contactanos]
-    brand = params[:brand]
-    model_printer = params[:model_printer]
-    model_cartridge = params[:model_cartridge]
-    quantity = params[:quantity] 
+    #brand = params[:brand]
+    #model_printer = params[:model_printer]
+    #model_cartridge = params[:model_cartridge]
+    #quantity = params[:quantity] 
     mensaje = params[:mensaje]
 
 
     
     require 'mail'
       Mail.defaults do
-        delivery_method :smtp, { :address   => "smtp.sendgrid.net",
+        delivery_method :smtp, { :address   => "smtp.gmail.com",
                                  :port      => 587,
                                  :domain    => "tbf.mx",
-                                 :user_name => "davidzu",
-                                 :password => "Mictlan9",
+                                 :user_name => "carlos.acosta8912@gmail.com",
+                                 :password  => "dcujzzcapusgfdvg",
                                  :authentication => :login,
                                  :enable_starttls_auto => true }
       end
@@ -115,7 +115,7 @@ class StoreController < ApplicationController
       body_line = ""
       @line.each do |l|
         cartucho_line = Cartucho.find(l.cartucho_id)
-        body_line += 'cartucho modelo: ' + cartucho_line.clave.to_s + 'la cantidad de: ' + l.quantity.to_s + '<br>'
+        body_line += 'cartucho modelo: ' + cartucho_line.clave.to_s + 'la cantidad de: ' + l.quantity.to_s + 'de la marca: ' + cartucho_line.brand.to_s + '<br>'
       end  
 
       mail = Mail.deliver do
@@ -123,7 +123,7 @@ class StoreController < ApplicationController
         from 'Servicios del Server <servidor@tonerdpt.com.mx>'
         subject 'Contacto pagina Toner'
         text_part do
-          body 'Hello world in text'
+          body 'su cliente no puede abrir este correo'
         end
         html_part do
           content_type 'text/html; charset=UTF-8'

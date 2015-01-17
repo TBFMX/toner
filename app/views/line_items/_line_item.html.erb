@@ -3,7 +3,9 @@
 <% else %>
 <tr>
 <% end %>
-	<td><%= line_item.quantity %>&times;</td>
-	<td><%= line_item.cartucho.title %></td>
-	<td class="item_price"><%= number_to_currency(line_item.total_price) %></td>
+	
+	<td>Cartucho: <%= line_item.cartucho.title %></td>
+	<td>Marca: <%= line_item.cartucho.brand %></td>
+	<td>Cantidad: <%= line_item.quantity %></td>
+	
 </tr>
