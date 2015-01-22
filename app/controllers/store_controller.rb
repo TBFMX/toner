@@ -15,6 +15,12 @@ class StoreController < ApplicationController
   end
 
   def presupuesto
+    @line = LineItem.where('cart_id = ?',session[:cart_id])
+      @body_line = ""
+      @line.each do |l|
+        cartucho_line = Cartucho.find(l.cartucho_id)
+        @body_line += 'cartucho modelo: ' + cartucho_line.clave.to_s + ' la cantidad de: ' + l.quantity.to_s + ' de la marca: ' + cartucho_line.brand.to_s + '<br>'
+      end
 
   end  
 
@@ -71,11 +77,11 @@ class StoreController < ApplicationController
               Email: ' + email + '<br>
               Teléfono: ' + contactanos + '<br>
           </p>
-
-          <p>Para pedir informes sobre:<br>
-              La impresora: ' + model_printer + ' de la marca: ' + brand + ', para la cantidad ' + quantity + ' cartuchos modelo: ' + model_cartridge + '.<br>
-              Comentarios del comprador: ' + mensaje + '<br>
-          </p>'
+          '
+          #<p>Para pedir informes sobre:<br>
+          #    La impresora: ' + model_printer + ' de la marca: ' + brand + ', para la cantidad ' + quantity + ' cartuchos modelo: ' + model_cartridge + '.<br>
+          #    Comentarios del comprador: ' + mensaje + '<br>
+          #</p>'
         end
       end
 
