@@ -160,6 +160,20 @@ form select{
   color: #fb008d;
 }
 
+.carrito{
+  padding: 10px;
+  height: 30px;
+  position: absolute;
+  width: 820px;
+  text-align: right;
+}
+
+.carrito a{
+  color:#fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 /*----------menu ----------*/
 .der_contenido .menu{
   width: 846px;

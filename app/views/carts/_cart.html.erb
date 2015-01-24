@@ -1,10 +1,18 @@
 <br>
 <br>
+<div class="tabla_carrito"> 
 	<table>
+	<tr>
+		<th>Cartucho:</th>
+		<th>Marca:</th>
+		<th>Cantidad:</th>
+	</tr>		
 		<%= render(cart.line_items) %>
 
-		<tr class="total_line">
-			<td colspan="2">Total</td>
-			<td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
+		<tr>
+			<td colspan="3" class="total_line">
+				Total:  <%= number_to_currency(cart.total_price) %>
+			</td>
 		</tr>
 	</table>
+</div>	

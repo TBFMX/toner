@@ -63,3 +63,7 @@
 	margin: 2px 10px 0px 10px;
 	width: 142px;
 }
+
+.buscador_productos form label{
+	margin: 5px 10px;
+}

@@ -1,0 +1,31 @@
+.tabla_carrito{
+	width: 700px;
+	margin: 0 auto;
+}
+
+.tabla_carrito table{
+	width: 700px;
+}
+
+
+.tabla_carrito table tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+.tabla_carrito table tr th{
+	color: #fff;
+	background-color: #12a7e7;
+}
+
+.tabla_carrito table tr td{
+	width: 33%;
+	color: #000;
+	text-align: center;
+}
+
+.tabla_carrito .total_line{
+	text-align: right;
+	color: #fff;
+	background-color: #12a7e7;
+	font-weight: bold;	
+}

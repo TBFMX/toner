@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20141216183459) do
     t.string   "title"
     t.text     "description"
     t.string   "image_url"
-    t.string   "price",           limit: 9
+    t.string   "price",           limit: 8
     t.string   "brand"
     t.string   "model"
     t.string   "color"
