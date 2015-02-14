@@ -1,4 +1,5 @@
-<div class="cintilla_contactos">Contactanos?</div> 
+<div class="cintilla_contactos">Contactanos?</div>
+<p>Llamanos para obtener precios de cartuchos originales.</p>
 <%= form_tag presupuesto_sender_path do  %>
 
   <%#= link_to contacto_path %>
@@ -23,9 +24,6 @@
     <p><%= label_tag  "contactanos", "Teléfono:"  %><br>
     <%= text_field_tag "contactanos","" , required: true %></p>
   </div>
-
-   
-
 
   <div class="datos_mensaje">
     <%= label_tag  "mensaje", "Pedido:"  %><br>

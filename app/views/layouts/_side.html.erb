@@ -4,10 +4,9 @@
 <div class="side">
 	<span class="logo"><%= link_to image_tag("/Imagenes/Inicio/logo.jpg"), store_path, class: "menu1" %></span>
     <p class="titulorosa">Información</br><span class="tituloazul">DF: 5572 3254</br>Qro: 4430 1039</span></p>
-    <p class="correo"> informacion@cwmex.com.mx </p> 
+    <a href="mailto:informacion@cwmex.com.mx" class="correo"> informacion@cwmex.com.mx </a> 
     <p> <span class="tituloazul2">Servicio de domicilio</span></br>
     <span class="titulorosa3"> sin costo</span><span class="tituloazul3"> en Queretaro, </br>DF y area metropolitana </span></p>
-    <p><%= link_to('Carrito(' + @cart.line_items.count.to_s + ')',cart_path(@cart))%></p>
     <p class="tituloverdetext"> Buscar cartucho </p>
     <div class="buscador_productos">
         <%= form_tag search_path do %>
