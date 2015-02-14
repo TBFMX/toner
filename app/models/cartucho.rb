@@ -42,8 +42,11 @@ class Cartucho < ActiveRecord::Base
 	    
 		    if !modelo_c.blank?
 		    	modelo_sc = '%' + modelo_c + '%'
-		    	@aux= @aux + 'and clave LIKE ? '
+		    	modelo_sc2 = '%' + modelo_c.upcase + '%'
+		    	@aux= @aux + 'and (clave LIKE ? or clave LIKE ?)'
 		    	@aux2[@cont]=  modelo_sc
+		    	@cont=@cont+1
+		    	@aux2[@cont]=  modelo_sc2
 		    	@cont=@cont+1
 		    	
 		    end
