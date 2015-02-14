@@ -15,3 +15,10 @@ jQuery ->
 #	    else
 #	      $('#impresoras').empty()
 #	      $('#impresoras').parent().hide()
+ 	$("#mensaje").hide();
+jQuery -> 
+$('#agregar_form').submit ->	
+	#$('#mensaje').dialog()
+	$('#mensaje').show()
+ 
+	

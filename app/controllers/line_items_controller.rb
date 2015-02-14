@@ -43,6 +43,7 @@ class LineItemsController < ApplicationController
           puts "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
           puts "agregado con exito"
           puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+          
         }
         format.json { render :show, status: :created, location: @line_item }
       else

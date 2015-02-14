@@ -1,3 +1,4 @@
+
 <div class="cintilla_cartuchos">Cartuchos</div>
 
 <div class="filtrar_cartuchos">
@@ -16,6 +17,10 @@
   <p><%= button_to('Finalizar',presupuesto_path(),method: :get)%></p>
 </div>
 
+<div id="mensaje">
+  <p>mensaje de agregado</p>
+</div>
+
 <table class="tabla_lista_articulos">
   <tr>
     <th>Marca</th>
@@ -31,7 +36,7 @@
       <td><%=cartucho.clave%></td>
       <td><%= cartucho.price %></td>
       <td colspan = '2'>
-      <%= form_tag(line_items_path, remote: true) do %>
+      <%= form_tag(line_items_path, remote: true, :id=>"agregar_form") do %>
         <%= text_field_tag 'quantity'%>
         <%#= text_field_tag 'total' %> <!-- el id es 'total' -->  
         <%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar'%>
