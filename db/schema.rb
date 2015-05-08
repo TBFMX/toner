@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20150122174224) do
     t.string   "title"
     t.text     "description"
     t.string   "image_url"
-    t.decimal  "price"
     t.string   "brand"
     t.string   "model"
     t.string   "color"
@@ -42,6 +41,7 @@ ActiveRecord::Schema.define(version: 20150122174224) do
     t.integer  "rendimiento"
     t.string   "impresoras"
     t.string   "precio_original"
+    t.decimal  "price"
   end
 
   create_table "data_files", force: true do |t|

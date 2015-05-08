@@ -1,6 +1,7 @@
 <br>
 <br>
 <div class="tabla_carrito"> 
+<<<<<<< HEAD
 	<table>
 	<tr>
 		<th>Marca:</th>
@@ -17,3 +18,20 @@
 		</tr>
 	</table>
 </div>	
+=======
+  <table>
+    <tr>
+      <th>Marca:</th>
+      <th>Cartucho:</th>
+      <th>Cantidad:</th>
+    </tr>		
+    <%= render(cart.line_items) %>
+
+    <tr>
+      <td colspan="3" class="total_line">
+        Total:  <%= number_to_currency(cart.total_price) %>
+    </td>
+    </tr>
+  </table>
+</div>	
+>>>>>>> master

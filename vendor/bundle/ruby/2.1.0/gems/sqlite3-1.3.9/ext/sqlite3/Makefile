@@ -30,8 +30,13 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(rubysitearchprefix)/vendor_ruby/$(ruby_version)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
+<<<<<<< HEAD
 sitearchdir = $(DESTDIR)./.gem.20150414-10931-1j231gf
 sitelibdir = $(DESTDIR)./.gem.20150414-10931-1j231gf
+=======
+sitearchdir = $(DESTDIR)./.gem.20150328-6453-1t67ieg
+sitelibdir = $(DESTDIR)./.gem.20150328-6453-1t67ieg
+>>>>>>> master
 sitedir = $(DESTDIR)/usr/local/lib/site_ruby
 rubyarchdir = $(rubyarchprefix)/$(ruby_version)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -83,7 +88,11 @@ INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir
 DEFS     = 
 CPPFLAGS = -DHAVE_RB_PROC_ARITY -DHAVE_RB_INTEGER_PACK -DHAVE_SQLITE3_INITIALIZE -DHAVE_SQLITE3_BACKUP_INIT -DHAVE_SQLITE3_COLUMN_DATABASE_NAME -DHAVE_SQLITE3_ENABLE_LOAD_EXTENSION -DHAVE_SQLITE3_LOAD_EXTENSION -DHAVE_SQLITE3_OPEN_V2 -DHAVE_SQLITE3_PREPARE_V2 -DHAVE_TYPE_SQLITE3_INT64 -DHAVE_TYPE_SQLITE3_UINT64 -D_FORTIFY_SOURCE=2 $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) -g -O2 -fstack-protector-strong -Wformat -Werror=format-security $(ARCH_FLAG)
+<<<<<<< HEAD
 ldflags  = -L. -Wl,-z,relro -L/build/ruby2.1-NaMyQG/ruby2.1-2.1.5/debian/lib -fstack-protector -rdynamic -Wl,-export-dynamic
+=======
+ldflags  = -L. -Wl,-z,relro -L/build/ruby2.1-64qTCU/ruby2.1-2.1.5/debian/lib -fstack-protector -rdynamic -Wl,-export-dynamic
+>>>>>>> master
 dldflags =  
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)

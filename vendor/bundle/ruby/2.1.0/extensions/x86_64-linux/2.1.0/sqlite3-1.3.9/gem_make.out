@@ -25,5 +25,9 @@ compiling backup.c
 linking shared-object sqlite3/sqlite3_native.so
 
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 sqlite3_native.so ./.gem.20150414-10931-1j231gf/sqlite3
+=======
+/usr/bin/install -c -m 0755 sqlite3_native.so ./.gem.20150328-6453-1t67ieg/sqlite3
+>>>>>>> master
 installing default sqlite3_native libraries
