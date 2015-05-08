@@ -209,6 +209,6 @@ class CartuchosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cartucho_params
-      params.require(:cartucho).permit(:title, :description, :image_url, :price, :brand, :model, :color, :price_40, :price_21, :price_10)
+      params.require(:cartucho).permit(:title, :description, :image_url, :price, :brand, :model, :color, :impresoras)
     end
 end

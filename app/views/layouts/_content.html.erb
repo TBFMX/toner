@@ -1,12 +1,12 @@
 <div id="slider-shadow">
     <div id="slider">
         <div id="mask">
-            <ul>
-            <li><img src="/Imagenes/Inicio/banner01.png" alt="image01" /></li>
-            <li><img src="/Imagenes/Inicio/banner02.png" alt="image02" /></li>
-            <li><img src="/Imagenes/Inicio/banner03.png" alt="image03" /></li>
-            <li><%= link_to image_tag("/Imagenes/Inicio/banner04.png"), renta_path %></li>
-            <li><%= link_to image_tag("/Imagenes/Inicio/banner05.png"), distribuidores_path %></li>
+          <ul>
+            <li><img src="<%=image_path("Inicio/banner01.png")%>" alt="image01" /></li>
+            <li><img src="<%=image_path("Inicio/banner02.png")%>" alt="image02" /></li>
+            <li><img src="<%=image_path("Inicio/banner03.png")%>" alt="image03" /></li>
+            <li><%= link_to image_tag("Inicio/banner04.png"), renta_path %></li>
+            <li><%= link_to image_tag("Inicio/banner05.png"), distribuidores_path %></li>
             </ul>
         </div>
         <div id="progress">

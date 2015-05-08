@@ -1,6 +1,6 @@
 body {
   position: static;
-  background-image: url("/Imagenes/Inicio/fondo.jpg");
+  background-image: url("Inicio/fondo.jpg");
   color: #dddddd;
   margin-top:0px;
   background-attachment: fixed;
@@ -147,7 +147,7 @@ form select{
 /*--------------------Divs division derecho ---------------*/
 
 .der_contenido .banner{
-  background: url("/Imagenes/Inicio/banner.jpg");
+  background: url("Inicio/banner.jpg");
   width: 846px;
   height: 138px;
 }

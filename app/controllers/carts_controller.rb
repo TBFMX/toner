@@ -75,19 +75,19 @@ class CartsController < ApplicationController
     respond_to do |format|
       format.html { 
 
-       }
+      }
       format.json { head :no_content }
     end
   end  
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cart
-      @cart = Cart.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_cart
+    @cart = Cart.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def cart_params
-      params[:cart]
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def cart_params
+    params[:cart]
+  end
 end

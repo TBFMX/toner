@@ -2,7 +2,7 @@
 <%@brand = Brand.all.distinct%>
 <%@printer = Printer.all.distinct%>
 <div class="side">
-	<span class="logo"><%= link_to image_tag("/Imagenes/Inicio/logo.jpg"), store_path, class: "menu1" %></span>
+	<span class="logo"><%= link_to image_tag("Inicio/logo.jpg"), store_path, class: "menu1" %></span>
     <p class="titulorosa">Información</br><span class="tituloazul">DF: 5572 3254</br>Qro: 4430 1039</span></p>
     <a href="mailto:informacion@cwmex.com.mx" class="correo"> informacion@cwmex.com.mx </a> 
     <p> <span class="tituloazul2">Servicio de domicilio</span></br>
@@ -28,6 +28,6 @@
         <%#= submit_tag "buscar" %>
     <%# end %> 
     -->
-	<span class ="imagen2"><img src="/Imagenes/Inicio/imagen2.jpg"></span>
-    <span class ="imagen3"><img src="/Imagenes/Inicio/imagen3.jpg"></span>
+    <span class ="imagen2"><img src="<%=image_path("Inicio/imagen2.jpg")%>"></span>
+    <span class ="imagen3"><img src="<%=image_path("Inicio/imagen3.jpg")%>"></span>
 </div>	

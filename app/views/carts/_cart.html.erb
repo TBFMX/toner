@@ -3,14 +3,15 @@
 <div class="tabla_carrito"> 
 	<table>
 	<tr>
-		<th>Cartucho:</th>
 		<th>Marca:</th>
+		<th>Modelo:</th>
+		<th>Impresora:</th>
 		<th>Cantidad:</th>
 	</tr>		
 		<%= render(cart.line_items) %>
 
 		<tr>
-			<td colspan="3" class="total_line">
+			<td colspan="4" class="total_line">
 				Total:  <%= number_to_currency(cart.total_price) %>
 			</td>
 		</tr>

@@ -18,13 +18,16 @@
 </div>
 
 <div id="mensaje">
-  <p>El cartucho ha sido agregado al carrito</p>
+  <% if notice %>
+    <p id="notice"><%= notice %></p>
+  <% end %>
 </div>
 
 <table class="tabla_lista_articulos">
   <tr>
     <th>Marca</th>
     <th>Modelo</th>
+    <th>Impresora</th>
     <th>Precio</th>
     <th>Cantidad</th>
     
@@ -34,12 +37,13 @@
     <tr>
       <td><%=cartucho.brand%></td>
       <td><%=cartucho.clave%></td>
+      <td><%=cartucho.impresoras%></td>
       <td><%= cartucho.price %></td>
-      <td colspan = '2'>
+      <td colspan = '3'>
       <%= form_tag(line_items_path, remote: true, :id=>"agregar_form") do %>
         <%= text_field_tag 'quantity'%>
         <%#= text_field_tag 'total' %> <!-- el id es 'total' -->  
-        <%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar'%>
+        <%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar' %>
       <% end %>
       </td>
     </tr>
