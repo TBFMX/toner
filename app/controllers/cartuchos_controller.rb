@@ -100,10 +100,11 @@ class CartuchosController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
   #funciones para subir archivos csv
 
   def import
-    
   end
 
   def upload
@@ -118,7 +119,7 @@ class CartuchosController < ApplicationController
         puts "-----------------direccion actual-2--------------"
         puts Dir.pwd
         puts "------------------------------------------------"
-        directory = "public/data"
+        directory = "app/assets"
         Dir.chdir(directory) do
           if File.exist?(@csv_file_path.to_s)
             puts "esta en local"
@@ -195,11 +196,6 @@ class CartuchosController < ApplicationController
     redirect_to store_path
   end 
   ####terminan csv
-
-
-
-
-  
 
   private
     # Use callbacks to share common setup or constraints between actions.

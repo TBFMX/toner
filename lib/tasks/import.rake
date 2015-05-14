@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 #lib/tasks/import.rake
->>>>>>> master
 desc "Imports a CSV file into an ActiveRecord table"
 task :csv_model_import, [:filename, :model] => :environment do |task,args|
   lines = File.new(args[:filename]).readlines
@@ -12,8 +9,4 @@ task :csv_model_import, [:filename, :model] => :environment do |task,args|
     attributes = Hash[keys.zip values]
     Module.const_get(args[:model]).create(attributes)
   end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> master

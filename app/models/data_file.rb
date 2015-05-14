@@ -16,7 +16,7 @@ class DataFile < ActiveRecord::Base
 	    @path2 = ""
 	    @path = ""
 
-    	directory = "public/data"
+    	directory = "app/assets"
     	#directory = "app/assets/data"
     	Dir.chdir(directory) do
 	    	directory = carpeta.to_s

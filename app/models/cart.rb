@@ -11,13 +11,10 @@ class Cart < ActiveRecord::Base
     current_item
   end
 
-<<<<<<< HEAD
   def empty?
     line_items.empty?
   end
 
-=======
->>>>>>> master
   def total_price
     line_items.to_a.sum { |item| item.total_price.to_s.delete('$ ,').to_f }
   end

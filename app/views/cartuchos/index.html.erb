@@ -39,20 +39,13 @@
       <td><%=cartucho.clave%></td>
       <td><%=cartucho.impresoras%></td>
       <td><%= cartucho.price %></td>
-<<<<<<< HEAD
-      <td colspan = '3'>
-      <%= form_tag(line_items_path, remote: true, :id=>"agregar_form") do %>
-        <%= text_field_tag 'quantity'%>
-        <%#= text_field_tag 'total' %> <!-- el id es 'total' -->  
-        <%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar' %>
-=======
-      <td colspan = '2'> <!-- line_items_path -->
+
+      <td colspan = '3'> <!-- line_items_path -->
       <%= form_tag(line_items_path, remote: true, :id=>"agregar_form") do %>
         <%= text_field_tag 'quantity'%>
         <%#= text_field_tag 'total' %> <!-- el id es 'total' -->  
         <%= hidden_field_tag 'cartucho_id', cartucho.id%>
         <%= submit_tag 'Agregar' %>
->>>>>>> master
       <% end %>
       </td>
     </tr>
