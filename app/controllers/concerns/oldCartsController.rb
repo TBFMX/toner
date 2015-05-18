@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_action :set_cart
+  before_action :set_cart, only: [:show, :edit, :update, :destroy, :enviar]
 
   # GET /carts
   # GET /carts.json
@@ -80,37 +80,14 @@ class CartsController < ApplicationController
     end
   end  
 
-  def add_cartucho
-    @cart.save
-    session[:cart_id] = @cart.id
-    product = Cartucho.find(params[:id])
-    item = @cart.make_items(@cart.id, product.id, 1)
-    @cart.total_price
-
-    flash[:notice] = "Product Added to Cart"
-    redirect_to cartuchos_path
-  end
-
   private
-  def start_session!
-    if !session[:cart_id].nil?
-      set_cart
-    end
-    session[:cart_id].nil?
-  end
   # Use callbacks to share common setup or constraints between actions.
   def set_cart
-    if session[:cart_id].nil?
-      @cart = Cart.create
-      session[:cart_id]=@cart.id
-      @cart
-    else
-      @cart=Cart.find(session[:cart_id])
-    end
+    @cart = Cart.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def cart_params
-    params[:cart_id]
+    params[:cart]
   end
 end

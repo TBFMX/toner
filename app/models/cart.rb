@@ -1,12 +1,14 @@
 class Cart < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
 
-  def add_cartucho(cartucho_id,qty)
-    current_item = line_items.find_by(cartucho_id: cartucho_id)
+  def make_items(cart_id, cartucho_id, quantity)
+    current_item = line_items.find_by(cart_id: cart_id, cartucho_id: cartucho_id)
+    
     if current_item
-      current_item.quantity = qty
+      current_item.quantity += 1
+      current_item.save
     else
-      current_item = line_items.build(cartucho_id: cartucho_id)
+      current_item = line_items.create(cart_id: cart_id, cartucho_id: cartucho_id, quantity: quantity)
     end
     current_item
   end

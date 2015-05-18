@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   get 'store/index'
 
+  get "cart" => "cart#show"
+  post "carts/add_cartucho/:id" => "carts#add_cartucho", :as => :add_cartucho
+  post "line_items/remove/:id" => "line_item#remove", :as => :remove
+
   controller :cartuchos do 
     get 'cartuchos/new' => :new
     get 'cartuchos/edit/:id' => :edit, :as => 'edit_cartucho'

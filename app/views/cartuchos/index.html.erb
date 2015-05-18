@@ -17,12 +17,6 @@
   <p><%= button_to('Finalizar',presupuesto_path(),method: :get)%></p>
 </div>
 
-<div id="mensaje">
-  <% if notice %>
-    <p id="notice"><%= notice %></p>
-  <% end %>
-</div>
-
 <table class="tabla_lista_articulos">
   <tr>
     <th>Marca</th>
@@ -39,14 +33,8 @@
       <td><%=cartucho.clave%></td>
       <td><%=cartucho.impresoras%></td>
       <td><%= cartucho.price %></td>
-
       <td colspan = '3'> <!-- line_items_path -->
-      <%= form_tag(line_items_path, remote: true, :id=>"agregar_form") do %>
-        <%= text_field_tag 'quantity'%>
-        <%#= text_field_tag 'total' %> <!-- el id es 'total' -->  
-        <%= hidden_field_tag 'cartucho_id', cartucho.id%>
-        <%= submit_tag 'Agregar' %>
-      <% end %>
+        <%= button_to "Agregar", add_cartucho_path(cartucho.id), method: :post %>
       </td>
     </tr>
   <% end %>

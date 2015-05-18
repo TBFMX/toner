@@ -27,15 +27,15 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
     cartucho = Cartucho.find(params[:cartucho_id])
+    cart = Cart.find(params[:cartucho_id])
     if params[:quantity].nil? || params[:quantity].blank?
       params[:quantity] = 0
     end
-    @line_item = @cart.add_cartucho(cartucho.id, params[:quantity])
+    @line_item = @cart.make_items(cart.id, cartucho.id, params[:quantity])
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item, notice: 'El cartucho ha sido agregado al carrito'
-        }
+        format.html { redirect_to @line_item, notice: 'LineItem was successfully created.' }
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
@@ -71,11 +71,11 @@ class LineItemsController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_line_item
-    @line_item = LineItem.find(params[:id])
+    @line_item= LineItem.new
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def line_item_params
-    params.require(:line_item).permit(:cartucho_id, :cart_id)
+    params.require(:line_item).permit(:cart_id, :cartucho_id, :quantity)
   end
 end

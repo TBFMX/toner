@@ -3,9 +3,9 @@
   <tr>
     <th>Marca</th>
     <th>Modelo</th>
+    <th>Impresora</th>
     <th>Precio</th>
-    <th>Cantidad</th>
-    <th>Total</th>
+    <th></th>
     <th></th>
   </tr>
   <%unless @cartuchos.nil?
@@ -13,12 +13,11 @@
     <tr>
       <td><%=cartucho.brand%></td>
       <td><%=cartucho.clave%></td>
+      <td><%=cartucho.impresoras%></td>
       <td><%= number_to_currency(cartucho.price) %></td>
-      <%= form_tag(line_items_path, remote: true) do %>
-        <td><%= text_field_tag 'quantity'%></td>
-        <td><%= text_field_tag 'total' %></td> <!-- el id es 'total' -->  
-        <td><%= hidden_field_tag 'cartucho_id', cartucho.id%> <%= submit_tag 'Agregar'%></td>
-      <%end%>
+      <td colspan = '3'> <!-- line_items_path -->
+        <%= button_to "Agregar", add_cartucho_path(cartucho.id), method: :post %>
+      </td>
     </tr>
   <% end end%>
 </table>

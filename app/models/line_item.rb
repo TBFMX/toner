@@ -5,5 +5,5 @@ class LineItem < ActiveRecord::Base
   def total_price
 	cartucho.price * quantity
   end
-
+  
 end

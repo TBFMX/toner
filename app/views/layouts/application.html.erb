@@ -7,7 +7,7 @@
   <div class="der_contenido">
     <div class="banner" >
       <div class="carrito">
-            <%= link_to('Carrito(' + @cart.line_items.count.to_s + ')', cart_path(@cart)) %>
+          <%= link_to('Carrito(' + @cart.line_items.count.to_s + ')', cart_path(@cart)) %>
       </div>
       <a href="http://www.facebook.com"><img class="face" src="<%=image_path("Inicio/facebook.jpg")%>"></a>
       <a href="http://www.twitter.com"><img class="twiter" src="<%=image_path("Inicio/twitter.jpg")%>"></a>
@@ -16,7 +16,10 @@
     <div class="menu"><%= render partial: "layouts/menu" %></div>
     <div class="contenido">
       <% if notice %>
-        <p id="notice"><%= notice %></p>
+        <div id="notice" data-alert class="alert-box">
+          <%= notice %>
+          <a href="javascript:location.reload()" class="close">&times;</a>
+        </div>
       <% end %>
 
       <%= yield %>

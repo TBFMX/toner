@@ -1,5 +1,9 @@
 <br>
 <br>
+  <% unless @cart.line_items.any? %>
+    No tiene cartuchos en su carrito. <%= link_to "Ponga algunos", cartuchos_path %>
+<% end %>
+
 <div class="tabla_carrito"> 
 	<table>
 	<tr>

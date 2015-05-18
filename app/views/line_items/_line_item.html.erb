@@ -3,11 +3,8 @@
 <% else %>
 <tr>
 <% end %>
-	<% if line_item.quantity > 0 %>
 	<td><%= line_item.cartucho.brand %></td>
 	<td><%= line_item.cartucho.clave %></td>
 	<td><%= line_item.cartucho.impresoras %></td>
 	<td><%= line_item.quantity %></td>
-        <% end %>
-	
 </tr>
