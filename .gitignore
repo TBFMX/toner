@@ -14,8 +14,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/public/assets
-/public/data
 /config/environment_variables.yml
 /app/assets/cartuchosNoHeader.csv
 /app/assets/cartuchos.csv

@@ -1,0 +1,1254 @@
+@charset "UTF-8";.tabla_carrito{
+	width: 700px;
+	margin: 0 auto;
+}
+
+.tabla_carrito table{
+	width: 700px;
+}
+
+
+.tabla_carrito table tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+.tabla_carrito table tr th{
+	color: #fff;
+	background-color: #12a7e7;
+}
+
+.tabla_carrito table tr td{
+	width: 33%;
+	color: #000;
+	text-align: center;
+}
+
+.tabla_carrito .total_line{
+	text-align: right;
+	color: #fff;
+	background-color: #12a7e7;
+	font-weight: bold;	
+}
+/* line 5, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/carts.css.scss */
+.carts .item_price, .carts .total_line, #side #cart .item_price, #side #cart .total_line {
+  text-align: right;
+}
+/* line 8, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/carts.css.scss */
+.carts .total_line .total_cell, #side #cart .total_line .total_cell {
+  font-weight: bold;
+  border-top: 1px solid #595;
+}
+.tabla_lista_articulos{
+	width: 90%;
+	margin: 20px auto 0 auto;
+	color: #a6a6a6;
+}
+
+.tabla_lista_articulos tr:nth-child(even) {
+	background: #f2f2f2; 
+}
+
+.tabla_lista_articulos th{
+	text-align: left;
+
+}
+
+.tabla_lista_articulos td{
+	max-width: 250px;
+
+}
+
+.cartuchos_marcas{
+	width: 80%;
+	margin: 0 auto 0 auto;
+	vertical-align: bottom;
+	margin-top: 450px;
+}
+
+.cartuchos_marcas img{
+	padding-left: 20px;
+}
+
+.precios th td{
+	border-collapse: 2px solid #070719 ;
+}
+
+.tabla_lista_articulos input{
+	width: 80px;
+
+}
+
+
+
+.pagination{
+	bottom: 100%;
+	text-align: right;
+	float: right;
+	margin: 10px 10px;
+}
+
+/*------------------Filtros --------------------*/
+
+.filtrar_cartuchos{
+	width: 500px;
+	text-align: right;
+	float: right;
+	margin: 10px;
+
+}
+
+/*------------------buscador de la izquierda --------------------*/
+
+.buscador_productos form select{
+	margin: 2px 10px 0px 10px;
+	width: 142px;
+}
+
+.buscador_productos form label{
+	margin: 5px 10px;
+}
+/* line 5, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/cartuchos.css.scss */
+.cartuchos table {
+  border-collapse: collapse;
+}
+/* line 9, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/cartuchos.css.scss */
+.cartuchos table tr td {
+  padding: 5px;
+  vertical-align: top;
+  border: 2px groove #070719;
+}
+/* line 15, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/cartuchos.css.scss */
+.cartuchos .list_image {
+  width: 60px;
+  height: 70px;
+}
+/* line 20, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/cartuchos.css.scss */
+.cartuchos .list_description {
+  width: 60%;
+}
+/* line 23, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/cartuchos.css.scss */
+.cartuchos .list_description dl {
+  margin: 0;
+}
+/* line 27, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/cartuchos.css.scss */
+.cartuchos .list_description dt {
+  color: #244;
+  font-weight: bold;
+  font-size: larger;
+}
+/* line 33, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/cartuchos.css.scss */
+.cartuchos .list_description dd {
+  margin: 0;
+}
+/* line 38, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/cartuchos.css.scss */
+.cartuchos .list_actions {
+  font-size: x-small;
+  text-align: right;
+  padding-left: 1em;
+}
+/* line 44, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/cartuchos.css.scss */
+.cartuchos .list_line_even {
+  background: #e0f8f8;
+}
+/* line 48, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/cartuchos.css.scss */
+.cartuchos .list_line_odd {
+  background: #f8b0f8;
+}
+/*----------- Cintillas para los contenidos --------------------*/
+
+
+.cintilla_cartuchos,
+.cintilla_contactos,
+.cintilla_distribuidores,
+.cintilla_quienes,
+.cintilla_renta{
+	font-size: 14px;
+	font-weight: bold;
+	padding: 3px;
+	color: #FFF;
+}
+
+.cintilla_cartuchos{
+	background: #fb008d; /* Old browsers */
+	background: -moz-linear-gradient(left,  #fb008d 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fb008d), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #fb008d 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #fb008d 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #fb008d 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to right,  #fb008d 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb008d', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.cintilla_contactos{
+	background: #fd982d; /* Old browsers */
+	background: -moz-linear-gradient(left,  #fd982d 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fd982d), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #fd982d 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #fd982d 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #fd982d 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to right,  #fd982d 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd982d', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.cintilla_distribuidores{
+	background: #68cc2b; /* Old browsers */
+	background: -moz-linear-gradient(left,  #68cc2b 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#68cc2b), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #68cc2b 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #68cc2b 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #68cc2b 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to right,  #68cc2b 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68cc2b', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */	
+}
+
+.cintilla_quienes{
+	background: #12a7e7; /* Old browsers */
+	background: -moz-linear-gradient(left,  #12a7e7 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#12a7e7), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #12a7e7 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #12a7e7 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #12a7e7 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to right,  #12a7e7 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12a7e7', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.cintilla_renta{
+	background: #edd838; /* Old browsers */
+	background: -moz-linear-gradient(left, #edd838 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#edd838), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #edd838 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #edd838 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #edd838 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to right, #edd838 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edd838', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+.datos_contacto,
+.datos_pedido{
+	width: 40%;
+	min-height:250px;
+	max-height: 100%;	
+	font-family: "Myriad Pro","Gill Sans","Gill Sans MT",Calibri,sans-serif;
+	font-size: 16px;	
+	padding: 5% 5% 10px 5%;
+	float: left;
+}
+
+.datos_contacto input,
+.datos_pedido input{
+	width: 90%;
+	font-family: "Myriad Pro","Gill Sans","Gill Sans MT",Calibri,sans-serif;
+	font-size: 16px;	
+	padding: 5px;	
+}
+
+.datos_mensaje textarea{
+	width: 95%;
+	height: 80px;
+	font-family: "Myriad Pro","Gill Sans","Gill Sans MT",Calibri,sans-serif;
+	font-size: 16px;	
+	padding: 5px;	
+}
+
+.datos_mensaje{
+	width: 90%;
+	padding: 5% 5% 10px 5%;
+	margin-top:20px; 
+}
+
+.textbox0{
+	padding-left: 75px;
+	resize: vertical;
+    min-height: 120px;
+    max-height: 400px;
+}
+
+.contact_actions{
+	width: 90%;
+	margin: 0 auto 0 auto;
+	text-align: center;
+}
+body {
+  position: static;
+  background-image: url("Inicio/fondo.jpg");
+  color: #dddddd;
+  margin-top:0px;
+  background-attachment: fixed;
+}
+
+form select{
+  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+}
+/*----------------------Div principal ------------------*/
+
+.principal{
+	background-color: #241f20;
+	width:1024px;
+	min-height:930px;
+	max-height:100%;
+	margin: 0px auto 0px auto;
+	border-bottom:6px solid #fb008d;
+	border-left:6px solid #fb008d;
+	border-right:6px solid #fb008d;
+	font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+}
+
+/*--------------------Divs division principal ---------------*/
+.izq_contenido{
+	width: 178px;
+	min-height: 900px;
+  max-height: 100%;
+	float: left;
+}	
+
+.der_contenido{
+	width: 846px;
+	min-height: 900px;
+  max-height: 100%;  
+	float: right;
+}
+
+.footer{
+ width: 1024px;
+ height: 25px;
+ font-size: 12px;
+ float: left;
+}
+
+/*--------------------Divs division izquierdo ---------------*/
+
+.izq_contenido .side {
+  width:178px;
+  height:900px;
+  float:left;
+ } 
+
+.izq_contenido .logo {
+  width: 178px;
+  height: 140px;
+  float:left;
+  margin-bottom: 20px;
+}
+
+.izq_contenido .imagen2 img {  
+  width: 178px;
+  height: 266px;
+  margin-top: 30px; 
+}
+
+.izq_contenido .imagen3 img {
+  width: 178px;
+  height: 64px;
+}
+
+.izq_contenido p{
+	margin-left: 10px;
+}
+
+.izq_contenido .titulorosa,
+.izq_contenido .tituloazul,
+.izq_contenido .correo,
+.izq_contenido .tituloazul2,
+.izq_contenido .titulorosa3,
+.izq_contenido .tituloazul3,
+.izq_contenido .tituloverdetext,
+.izq_contenido .titulorosatext,{
+   width:160px;    
+   margin-top: 10px;    
+   /*margin-left: 10px; */
+}
+
+.izq_contenido .titulorosa{
+    font-size:20px;
+    color:#fb008d;
+    letter-spacing: 2px;
+}
+
+.izq_contenido .tituloazul{
+   font-size:18px;
+   color:#12a7e9; 
+   letter-spacing: 0px;
+   margin: 0;
+}
+
+.izq_contenido .correo{
+    font-size:12px;
+    color:#fb008d;
+    padding-left: 5px;
+}
+
+.tituloazul2{
+   font-size:15px;
+   color:#12a7e9; 
+}
+
+.izq_contenido .titulorosa3,
+.izq_contenido .tituloazul3{
+   font-size:13px; 
+}
+
+.izq_contenido .titulorosa3{
+   color:#fb008d;
+}
+
+.izq_contenido .tituloazul3{
+   color:#12a7e9;
+}
+
+.izq_contenido .tituloverdetext,
+.izq_contenido .titulorosatext{
+   font-size:18px;
+   margin: 5px 0 0 10px;
+}
+
+.izq_contenido .tituloverdetext{
+    color:#68cc2b;
+}
+
+.izq_contenido .titulorosatext{
+    color:#fb008d;
+}
+
+.izq_contenido input{
+	width: 80%;
+    margin: 5px 10px 0px 10px;
+}
+
+/*--------------------Divs division derecho ---------------*/
+
+.der_contenido .banner{
+  background: url("Inicio/banner.jpg");
+  width: 846px;
+  height: 138px;
+}
+
+.der_contenido .banner img{
+  float: right;
+  margin-top: 75px;
+}
+
+.der_contenido .barra {
+  color: #fb008d;
+}
+
+.carrito{
+  padding: 10px;
+  height: 30px;
+  position: absolute;
+  width: 820px;
+  text-align: right;
+}
+
+.carrito a{
+  color:#fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*----------menu ----------*/
+.der_contenido .menu{
+  width: 846px;
+  height: 20px;
+  list-style:none;
+  margin:0;
+  padding:0;  
+  font-weight: bold;
+}
+
+.der_contenido .menu ul {
+  height: 20px;
+  font-size: 14px;
+  color: #dddddd;  
+  float: left;
+}
+
+.der_contenido .menu ul li {
+  float:left;
+  border:0;
+}
+
+.der_contenido .menu ul li .menu1,
+.der_contenido .menu ul li .menu1_1,
+.der_contenido .menu ul li .menu2,
+.der_contenido .menu ul li .menu2_1,
+.der_contenido .menu ul li .menu3,
+.der_contenido .menu ul li .menu3_1,
+.der_contenido .menu ul li .menu4,
+.der_contenido .menu ul li .menu4_1,
+.der_contenido .menu ul li .menu5,
+.der_contenido .menu ul li .menu5_1,
+.der_contenido .menu ul li .menu6,
+.der_contenido .menu ul li .menu6_1{
+  display:block;   
+  color: #DDDDDD;
+  text-decoration: none;
+  text-align: left;
+  border-left: 2px solid #fb008d;
+  padding: 1px 8px;
+  letter-spacing: 1px;
+} 
+
+.der_contenido .menu ul li .menu1_1,
+.der_contenido .menu ul li .menu1:hover{
+  color: #12A7E9;
+}
+
+.der_contenido .menu ul li .menu2_1,
+.der_contenido .menu ul li .menu2:hover{
+  color: #fb008d;
+}
+
+.der_contenido .menu ul li .menu3_1,
+.der_contenido .menu ul li .menu3:hover{
+  color: #Feea3b;
+}
+
+.der_contenido .menu ul li .menu4_1,
+.der_contenido .menu ul li .menu4:hover{
+  color: #68cc2b;
+}
+
+.der_contenido .menu ul li .menu5_1,
+.der_contenido .menu ul li .menu5:hover{
+  color: #12A7E9;
+}
+
+.der_contenido .menu ul li .menu6_1,
+.der_contenido .menu ul li .menu6:hover{
+  color: #fd982c;
+}
+
+/*---------- fin del menu ----------*/
+
+.der_contenido .contenido_index{
+  min-width: 100%;
+  height: 740px;
+  background: #241f20;
+  color:#FFF;
+}
+
+.der_contenido .contenido{
+  min-width: 100%;
+  height: 740px;
+  background: #FFFFFF;
+  color:#000;
+}
+
+/*---------------- footer --------------*/
+
+.footer ul {
+  list-style:none;
+  width: 1024px;
+  height: 20px;
+  font-size: 9px;
+  color: #dddddd;
+}
+
+.footer ul li {
+  float:left;
+  border:0;
+}
+
+.footer ul li a{
+  display:block;   
+  color: #FFF;
+  text-decoration: none;
+  text-align: left;
+  border-left: 1px solid #fb008d;
+  border-right: 1px solid #fb008d;
+  padding: 1px 8px;
+  letter-spacing: 1px;
+}
+/*----------- contenido ----------------*/
+
+.p1{
+  text-align: center;
+  font-size:27;
+  font: bold;
+  text-decoration: underline;
+}
+
+.bottom{
+  width: 200px;
+  height: 245px;
+  float: left;
+}
+.der_contenido .contenido .somos {
+	padding-top: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
+	text-align: justify;
+	font-family: "Myriad Pro","Gill Sans","Gill Sans MT",Calibri,sans-serif;
+	font-size: 16px;
+	line-height: 120%;
+}
+
+.der_contenido .contenido .impresora ,
+.der_contenido .contenido .distribuidores {
+	padding: 10px 0px 10% 10%;
+	float: right;
+} 
+
+
+.somos .logos{
+	width: 100%;
+	list-style: none;
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.somos .logos li{
+	width: 30%;
+	height: 20%;
+	float: left;
+	margin: 1.5%
+}
+
+.somos .logos li img{
+	max-width: 200px;
+}
+
+/* line 1, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 5, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: #12a7e9;
+  display: table;
+}
+
+/*---------- Estilo para el slider de la página principal --------------*/
+/* line 3, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#slider {
+  width: 677px;
+  height: 325px;
+  margin: 10px auto;
+  overflow: visible;
+  background-color: #362c30;
+  border: 0px solid #362c30;
+  -moz-transition: all 150ms ease-in;
+  -webkit-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  position: relative;
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+
+/* line 20, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#mask {
+  overflow: hidden;
+}
+
+/* line 24, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#mask img {
+  width: 677px;
+  height: 325px;
+}
+
+/* line 28, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#slider:hover {
+  background-color: #000;
+  -webkit-animation: rotatey 400ms ease-out;
+  -moz-animation: rotatey 400ms ease-out;
+}
+
+/* line 33, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#slider:hover #pause {
+  opacity: 1;
+}
+
+/* line 36, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#slider:hover #progress {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* line 39, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#slider:hover ul, #slider:hover #progress, #slider:hover #overlay {
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+/* line 43, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#pause {
+  width: 677px;
+  height: 325px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  background-image: url(http://iamceege.com/pure-css3-content-slider/images/paused.png);
+  background-position: 566px 10px;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  -moz-transition: all 150ms ease-in;
+  -webkit-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+}
+
+/* line 57, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#progress {
+  width: 1px;
+  height: 1px;
+  background-color: #ffd000;
+  -moz-animation: progress 30s infinite;
+  -webkit-animation: progress 30s infinite;
+  position: relative;
+  top: -1px;
+  -moz-transition: all 150ms ease-in;
+  -webkit-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+}
+
+/* line 69, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#overlay {
+  width: 677px;
+  height: 325px;
+  position: absolute;
+  top: 0;
+  background-image: url(http://iamceege.com/pure-css3-content-slider/images/overlay.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  -moz-transition: all 150ms ease-in;
+  -webkit-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  opacity: 0.5;
+  -moz-animation: overlay-fade 30s infinite;
+  -webkit-animation: overlay-fade 30s infinite;
+}
+
+/* line 85, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#slider ul {
+  width: 3385px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  -moz-animation: slide-animation 30s infinite;
+  -webkit-animation: slide-animation 30s infinite;
+  position: relative;
+  left: 0px;
+}
+
+/* line 95, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#slider li {
+  display: inline;
+  width: 677px;
+  height: 325px;
+  margin: 0;
+  padding: 0;
+  float: left;
+  position: relative;
+  background-image: url(http://iamceege.com/pure-css3-content-slider/images/loader.gif);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* line 107, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#slider li:last-of-type {
+  background-color: #362c30;
+}
+
+/* line 110, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+#slider li a {
+  display: block;
+  text-decoration: none;
+}
+
+@-webkit-keyframes slide-animation {
+  /* line 116, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  0% {
+    left: 0px;
+  }
+
+  /* line 117, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  15% {
+    left: 0px;
+  }
+
+  /* line 118, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  20% {
+    left: -677px;
+  }
+
+  /* line 119, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  35% {
+    left: -677px;
+  }
+
+  /* line 120, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  40% {
+    left: -1354px;
+  }
+
+  /* line 121, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  55% {
+    left: -1354px;
+  }
+
+  /* line 122, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  60% {
+    left: -2031px;
+  }
+
+  /* line 123, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  75% {
+    left: -2031px;
+  }
+
+  /* line 124, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  80% {
+    left: -2708px;
+  }
+
+  /* line 125, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  95% {
+    left: -2708px;
+  }
+
+  /* line 126, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  100% {
+    left: 0px;
+  }
+}
+
+@-moz-keyframes slide-animation {
+  /* line 130, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  0% {
+    left: 0px;
+  }
+
+  /* line 131, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  15% {
+    left: 0px;
+  }
+
+  /* line 132, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  20% {
+    left: -677px;
+  }
+
+  /* line 133, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  35% {
+    left: -677px;
+  }
+
+  /* line 134, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  40% {
+    left: -1354px;
+  }
+
+  /* line 135, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  55% {
+    left: -1354px;
+  }
+
+  /* line 136, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  60% {
+    left: -2031px;
+  }
+
+  /* line 137, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  75% {
+    left: -2031px;
+  }
+
+  /* line 138, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  80% {
+    left: -2708px;
+  }
+
+  /* line 139, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  95% {
+    left: -2708px;
+  }
+
+  /* line 140, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  100% {
+    left: 0px;
+  }
+}
+
+@-webkit-keyframes progress {
+  /* line 145, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  0% {
+    width: 0px;
+    background-color: #12A7E9;
+  }
+
+  /* line 146, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  15% {
+    width: 677px;
+    background-color: #12A7E9;
+  }
+
+  /* line 147, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  15.5% {
+    width: 0px;
+  }
+
+  /* line 148, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  20% {
+    width: 0px;
+    background-color: #fb008d;
+  }
+
+  /* line 149, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  35% {
+    width: 677px;
+    background-color: #fb008d;
+  }
+
+  /* line 150, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  35.5% {
+    width: 0px;
+  }
+
+  /* line 151, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  40% {
+    width: 0px;
+    background-color: #Feea3b;
+  }
+
+  /* line 152, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  55% {
+    width: 677px;
+    background-color: #Feea3b;
+  }
+
+  /* line 153, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  55.5% {
+    width: 0px;
+  }
+
+  /* line 154, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  60% {
+    width: 0px;
+    background-color: #12A7E9;
+  }
+
+  /* line 155, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  75% {
+    width: 677px;
+    background-color: #12A7E9;
+  }
+
+  /* line 156, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  75.5% {
+    width: 0px;
+  }
+
+  /* line 157, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  80% {
+    width: 0px;
+    background-color: #fb008d;
+  }
+
+  /* line 158, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  100% {
+    width: 677px;
+    background-color: #fb008d;
+  }
+}
+
+@-moz-keyframes progress {
+  /* line 162, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+
+  /* line 163, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  2% {
+    width: 0px;
+    opacity: 1;
+  }
+
+  /* line 164, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  20% {
+    width: 677px;
+    opacity: 1;
+  }
+
+  /* line 165, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  22.5% {
+    width: 677px;
+    opacity: 0;
+  }
+
+  /* line 166, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  22.59% {
+    width: 0px;
+  }
+
+  /* line 167, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  25% {
+    width: 0px;
+    opacity: 1;
+  }
+
+  /* line 168, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  45% {
+    width: 677px;
+    opacity: 1;
+  }
+
+  /* line 169, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  47.5% {
+    width: 677px;
+    opacity: 0;
+  }
+
+  /* line 170, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  47.59% {
+    width: 0px;
+  }
+
+  /* line 171, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  50% {
+    width: 0px;
+    opacity: 1;
+  }
+
+  /* line 172, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  70% {
+    width: 677px;
+    opacity: 1;
+  }
+
+  /* line 173, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  72.5% {
+    width: 677px;
+    opacity: 0;
+  }
+
+  /* line 174, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  72.59% {
+    width: 0px;
+  }
+
+  /* line 175, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  75% {
+    width: 0px;
+    opacity: 1;
+  }
+
+  /* line 176, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  95% {
+    width: 677px;
+    opacity: 1;
+  }
+
+  /* line 177, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  98% {
+    width: 677px;
+    opacity: 0;
+  }
+
+  /* line 178, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  100% {
+    width: 0px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotatey {
+  /* line 182, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  0% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+
+  /* line 183, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  25% {
+    transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -webkit-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+  }
+
+  /* line 184, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  50% {
+    transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+  }
+
+  /* line 185, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  100% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+}
+
+@-moz-keyframes rotatey {
+  /* line 189, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  0% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+
+  /* line 190, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  25% {
+    transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -webkit-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+  }
+
+  /* line 191, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  50% {
+    transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+  }
+
+  /* line 192, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  100% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes overlay-fade {
+  /* line 196, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 197, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  2% {
+    opacity: 0.5;
+  }
+
+  /* line 198, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  95% {
+    opacity: 0.5;
+  }
+
+  /* line 199, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  98% {
+    opacity: 0;
+  }
+
+  /* line 200, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes overlay-fade {
+  /* line 204, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 205, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  2% {
+    opacity: 0.5;
+  }
+
+  /* line 206, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  95% {
+    opacity: 0.5;
+  }
+
+  /* line 207, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  98% {
+    opacity: 0;
+  }
+
+  /* line 208, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/slider.css.scss */
+  100% {
+    opacity: 0;
+  }
+}
+/* line 4, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/store.css.scss */
+.store {
+  /* An entry in the store catalog */
+}
+/* line 5, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/store.css.scss */
+.store h1 {
+  margin: 0;
+  padding-bottom: 0.5em;
+  font: 150% sans-serif;
+  color: #226;
+  border-bottom: 3px dotted #77d;
+}
+/* line 14, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/store.css.scss */
+.store .entry {
+  overflow: auto;
+  margin-top: 1em;
+  border-bottom: 1px dotted #77d;
+  min-height: 100px;
+}
+/* line 20, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/store.css.scss */
+.store .entry img {
+  width: 80px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  position: absolute;
+}
+/* line 27, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/store.css.scss */
+.store .entry h3 {
+  font-size: 120%;
+  font-family: sans-serif;
+  margin-left: 100px;
+  margin-top: 0;
+  margin-bottom: 2px;
+  color: #227;
+}
+/* line 36, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/store.css.scss */
+.store .entry p, .store .entry div.price_line {
+  margin-left: 100px;
+  margin-top: 0.5em;
+  margin-bottom: 0.8em;
+}
+/* line 41, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/store.css.scss */
+.store .entry p form, .store .entry p div, .store .entry div.price_line form, .store .entry div.price_line div {
+  display: inline;
+}
+/* line 46, /home/abel/linode/tonerdepot/toner/app/assets/stylesheets/store.css.scss */
+.store .entry .price {
+  color: #44a;
+  font-weight: bold;
+  margin-right: 3em;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
