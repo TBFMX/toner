@@ -16,3 +16,7 @@
 /tmp
 /public/assets
 /public/data
+/config/environment_variables.yml
+/app/assets/cartuchosNoHeader.csv
+/app/assets/cartuchos.csv
+/app/assets/csv

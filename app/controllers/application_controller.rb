@@ -5,16 +5,17 @@ class ApplicationController < ActionController::Base
   include CurrentCart
   before_action :set_cart
 
-	require 'mail'
-		Mail.defaults do
-		  delivery_method :smtp, { :address   => "smtp.sendgrid.net",
-		                           :port      => 587,
-		                           :domain    => "tbf.mx",
-								   :user_name => "davidzu",
-								   :password => "Mictlan9",
-		                           :authentication => :login,
-		                           :enable_starttls_auto => true }
-		end
+  require 'mail'
+  Mail.defaults do
+    delivery_method :smtp, { :address   => ENV["SMTP_ADDRESS"],
+		             :port      => 587,
+		             :domain    => "tbf.mx",
+			     :user_name => ENV["SMTP_USER"],
+			     :password => ENV["SMTP_PASSWORD"],
+		             :authentication => :plain,
+		             :enable_starttls_auto => true
+                           }
+  end
 
 		# mail = Mail.deliver do
 		#   to 'yourRecipient@domain.com'
@@ -28,5 +29,4 @@ class ApplicationController < ActionController::Base
 		#     body '<b>Hello world in HTML</b>'
 		#   end
 		# end
-
 end

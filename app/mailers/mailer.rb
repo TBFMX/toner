@@ -1,5 +1,5 @@
 class Mailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "abchavz@gmail.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -8,8 +8,8 @@ class Mailer < ActionMailer::Base
   #
   def Contact(array)
     @greeting = "Hi"
-    
-    mail to: "jcmartinez@cwmex.com.mx"
+    mail to: "abchavz@yahoo.com.mx"
+    #mail to: "jcmartinez@cwmex.com.mx"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
