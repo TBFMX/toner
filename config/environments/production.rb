@@ -86,10 +86,10 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'smtp.mandrillapp.com',
-    user_name: <%= ENV['SMTP_USER'] %>,
+    address: ENV['SMTP_ADDRESS'],
+    user_name: ENV['SMTP_USER'],
     port: 587,
-    password: <%= ENV['SMTP_PASSWORD'] %>,
+    password: ENV['SMTP_PASSWORD'],
     domain: "heroku.com",
     authentication: :plain,
     #enable_starttls_auto: true
