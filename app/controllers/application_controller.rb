@@ -5,15 +5,16 @@ class ApplicationController < ActionController::Base
   include CurrentCart
   before_action :set_cart
 
-  require 'mail'
+  require 'mandrill'
+  mandrill = Mandrill::API.new ENV['YOUR_API_KEY']
   Mail.defaults do
-    delivery_method :smtp, { :address   => ENV["SMTP_ADDRESS"],
+    delivery_method :smtp, { :address   => 'smtp.mandrillapp.com',
 		             :port      => 587,
-		             :domain    => "tbf.mx",
+		             :domain    => "heroku.com",
 			     :user_name => ENV["SMTP_USER"],
 			     :password => ENV["SMTP_PASSWORD"],
 		             :authentication => :plain,
-		             :enable_starttls_auto => true
+		             #:enable_starttls_auto => true
                            }
   end
 

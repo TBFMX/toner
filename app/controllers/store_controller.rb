@@ -53,13 +53,15 @@ class StoreController < ApplicationController
     
     require 'mail'
       Mail.defaults do
-        delivery_method :smtp, { :address   => "smtp.sendgrid.net",
-                                 :port      => 587,
-                                 :domain    => "tbf.mx",
-                                 :user_name => "davidzu",
-                                 :password => "Mictlan9",
-                                 :authentication => :login,
-                                 :enable_starttls_auto => true }
+        delivery_method :smtp, {
+          :address   => ENV["SMTP_ADDRESS"],
+          :port      => 587,
+          :domain    => "heroku.com",
+          :user_name => ENV["SMTP_USER"],
+          :password => ENV["SMTP_PASSWORD"],
+          :authentication => :plain,
+          #:enable_starttls_auto => true
+        }
       end
 
       mail = Mail.deliver do
@@ -74,12 +76,15 @@ class StoreController < ApplicationController
         html_part do
           content_type 'text/html; charset=UTF-8'
           body '<h1>Cotización:</h1>
-          <p>Se a contactado la persona:<br>
+          <p>Se ha contactado la persona:<br>
               Nombre: ' + name + '<br>
               Email: ' + email + '<br>
               Teléfono: ' + contactanos + '<br>
           </p>
-          '
+            <p>Para pedir informes sobre:<br>
+              
+              Comentarios del comprador: ' + mensaje + '<br>
+          </p>'
           #<p>Para pedir informes sobre:<br>
           #    La impresora: ' + model_printer + ' de la marca: ' + brand + ', para la cantidad ' + quantity + ' cartuchos modelo: ' + model_cartridge + '.<br>
           #    Comentarios del comprador: ' + mensaje + '<br>
@@ -110,24 +115,25 @@ class StoreController < ApplicationController
     
     require 'mail'
       Mail.defaults do
-        delivery_method :smtp, { :address   => "smtp.gmail.com",
-                                 :port      => 587,
-                                 :domain    => "tbf.mx",
-                                 :user_name => "carlos.acosta8912@gmail.com",
-                                 :password  => "dcujzzcapusgfdvg",
-                                 :authentication => :login,
-                                 :enable_starttls_auto => true }
+        delivery_method :smtp, { :address   => ENV["SMTP_ADDRESS"],
+          :port      => 587,
+          :domain    => "heroku.com",
+          :user_name => ENV["SMTP_USER"],
+          :password  => ENV["SMTP_PASSWORD"],
+          :authentication => :plain,
+          #:enable_starttls_auto => true
+        }
       end
 
       @line = LineItem.where('cart_id = ?',session[:cart_id])
       body_line = ""
       @line.each do |l|
         cartucho_line = Cartucho.find(l.cartucho_id)
-        body_line += 'cartucho modelo: ' + cartucho_line.clave.to_s + 'la cantidad de: ' + l.quantity.to_s + 'de la marca: ' + cartucho_line.brand.to_s + '<br>'
+        body_line += 'cartucho modelo: ' + cartucho_line.clave.to_s + ' la cantidad de: ' + l.quantity.to_s + ' de la marca: ' + cartucho_line.brand.to_s + '<br>'
       end  
 
       mail = Mail.deliver do
-        to  'jcmartinez@cwmex.com.mx' #'sebastian@tbf.mx' #'información@tonerdpt.com.mx'#mail del webmaster
+        to  'abchavz@yahoo.com.mx' #'jcmartinez@cwmex.com.mx' #'sebastian@tbf.mx' #'información@tonerdpt.com.mx'#mail del webmaster
         from 'Servicios del Server <servidor@tonerdpt.com.mx>'
         subject 'Contacto pagina Toner'
         text_part do
@@ -136,17 +142,14 @@ class StoreController < ApplicationController
         html_part do
           content_type 'text/html; charset=UTF-8'
           body '<h1>Cotización:</h1>
-          <p>Se a contactado la persona:<br>
+          <p>Se ha contactado la persona:<br>
               Nombre: ' + name + '<br>
               Email: ' + email + '<br>
               Teléfono: ' + contactanos + '<br>
           </p>
 
           <p>Para pedir informes sobre:<br>
-              ' + body_line + '
-              
-              Comentarios del comprador: ' + mensaje + '<br>
-          </p>'
+              ' + body_line + '</p>'
         end
       end
       
