@@ -65,7 +65,7 @@ class StoreController < ApplicationController
       end
 
       mail = Mail.deliver do
-        to "jcmartinez@cwmex.com.mx, jcmartinez@cwmex.com.mx"
+        to "jcmartinez@cwmex.com.mx, tponce@cwmex.com.mx"
         #to  'jcmartinez@cwmex.com.mx'#mail del webmaster #'sebastian@tbf.mx'
         from 'Servicios del Server <servidor@tonerdpt.com.mx>'
         subject 'Contacto pagina Toner'
@@ -132,7 +132,7 @@ class StoreController < ApplicationController
       end  
 
       mail = Mail.deliver do
-        to  "jcmartinez@cwmex.com.mx, jcmartinez@cwmex.com.mx"
+        to  "jcmartinez@cwmex.com.mx, tponce@cwmex.com.mx"
         from 'Servicios del Server <servidor@tonerdpt.com.mx>'
         subject 'Contacto pagina Toner'
         text_part do
